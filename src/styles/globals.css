@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+    @apply bg-rose-500 text-white ;
+}
+
+.text-orange{
+    color: #ff9900;
+}
+
+.bg-orange{
+    background-color: #ff9900;
+}
+
+.hover:text-orange:hover{
+    color: #ff9900;
+}
+
+.hover:bg-orange:hover{
+    background-color: #ff9900;
+}
+
