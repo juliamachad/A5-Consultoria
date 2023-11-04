@@ -13,8 +13,8 @@ import LanguageSwitchButton from "./LanguageSwitchButton";
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "Sobre", href: "/about", current: false },
-  { name: "Serviços", href: "#services", current: false },
-  { name: "Portfólio", href: "#faq", current: false },
+  { name: "Serviços", href: "/services", current: false },
+  { name: "Portfólio", href: "/portfolio", current: false },
   //{ name: "Contato", href: "#contact", current: false },
 ];
 

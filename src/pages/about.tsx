@@ -8,7 +8,7 @@ export default function Home() {
     const backgroundImg = bg;
   return (
     <Layout>
-      <Banner backgroundImage={backgroundImg.src} />
+      <Banner backgroundImage={backgroundImg.src} text="Sobre nós" />
       <div className="bg-gray-50 dark:bg-neutral-900" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
         <h2 className="text-4xl font-bold">Nossa história</h2>
