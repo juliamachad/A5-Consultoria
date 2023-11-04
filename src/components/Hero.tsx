@@ -20,7 +20,7 @@ export function Hero() {
           <div className="flex flex-auto pt-10 gap-2 min-w-[350px] justify-center sm:justify-center">
 
             <div>
-              <Link href="https://github.com/humberni/halley/blob/main/README.md" target="_blank">
+              <Link href="/about">
                 <button className="bg-orange text-white text-base rounded-full px-4 p-2 font-medium">
                   Sobre nós
                 </button>

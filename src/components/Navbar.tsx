@@ -2,9 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import ThemeSwitchButton from "./ThemeSwitchButton";
 
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
+
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import LanguageSwitchButton from "./LanguageSwitchButton";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
@@ -19,6 +23,12 @@ function classNames(...classes: any) {
 }
 
 export default function Navbar() {
+
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  // After mounting, we have access to the theme
+  useEffect(() => setMounted(true), []);
+
   return (
     <Disclosure
       as="nav"
@@ -31,7 +41,19 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-between">
                 <div className="flex flex-shrink-0 items-center md:pl-0">
                   <Link href="/">
-                    <Image
+                  {resolvedTheme === "dark" ? (
+                        <Image
+                        className="block h-8 w-auto"
+                        src="/images/logos/logo-branca.png"
+                        alt="Logo Your Company"
+                        width={150}
+                        height={150}
+                        quality={75}
+                        sizes="100vw"
+                      />
+
+                    ) : (
+                      <Image
                       className="block h-8 w-auto"
                       src="/images/logos/logo@4x.png"
                       alt="Logo Your Company"
@@ -40,6 +62,9 @@ export default function Navbar() {
                       quality={75}
                       sizes="100vw"
                     />
+
+                    )}
+                    
                   </Link>
                 </div>
 
@@ -63,14 +88,14 @@ export default function Navbar() {
                   </div>
                   <div className=" inset-y-0 right-10 ml-3 sm:right-0 flex items-center gap-2">
                   <Link
-                    href="https://github.com/humberni/halley"
-                    target="_blank"
+                    href="/contato"
                     className="hidden sm:block"
                   >
                     <button className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 p-2 text-base font-medium dark:hover:bg-orange hover:bg-orange hover:text-white dark:hover:text-white rounded-full">
                       Contato
                     </button>
                   </Link>
+                  <LanguageSwitchButton></LanguageSwitchButton>
                   <ThemeSwitchButton />
                 </div>
                 </div>
@@ -110,11 +135,7 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <Link href="https://github.com/humberni/halley" target="_blank">
-                <button className="mt-12 bg-orange text-white px-4 p-3 font-medium rounded-full w-full">
-                  GitHub
-                </button>
-              </Link>
+              
             </div>
           </Disclosure.Panel>
         </>
