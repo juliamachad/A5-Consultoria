@@ -57,17 +57,17 @@ const social = [
 
 const column1 = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Faq", href: "#faq" },
-  { name: "Contact", href: "#contact" },
+  { name: "Sobre", href: "/about" },
+  { name: "Serviços", href: "/services" },
+  { name: "Portfólio", href: "/portfolio" },
+  { name: "Contato", href: "/contact" },
 ];
 
 const column2 = [
-  { name: "Not Found 404", href: "404" },
-  { name: "Documentation", href: "/" },
-  { name: "Guides", href: "/" },
-  { name: "Help", href: "/" },
+  { name: "produto1", href: "/" },
+  { name: "produto2", href: "/" },
+  { name: "produto3", href: "/" },
+  { name: "produto4", href: "/" },
 ];
 
 const column3 = [
@@ -79,13 +79,13 @@ const column3 = [
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-300 dark:text-neutral-400">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6">
         <div className="col-span-2 sm:col-span-3 md:col-span-3 lg:col-span-2 2xl:col-span-2">
           <Link href="/">
             <Image
               className="h-8 w-auto"
               src="/images/logos/logo-branca.png"
-              alt="Logo Your Company"
+              alt="Logo"
               width={150}
               height={150}
               quality={75}
@@ -109,9 +109,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="col-start-5">
           <h3 className="text-sm md:text-xs font-bold pb-4 pt-12 lg:pt-0">
-            COMPANY
+            Páginas
           </h3>
           {column1.map((item) => (
             <Link
@@ -124,9 +124,9 @@ export default function Footer() {
           ))}
         </div>
 
-        <div>
+        <div >
           <h3 className="text-sm md:text-xs font-bold pb-4 pt-12 lg:pt-0">
-            RESOURCES
+            Serviços
           </h3>
           {column2.map((item) => (
             <Link
@@ -139,23 +139,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div>
-          <h3 className="text-sm md:text-xs font-bold pb-4 pt-12 lg:pt-0">
-            LEGAL
-          </h3>
-          {column3.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="hover:text-orange md:text-sm my-4 grid"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <div className="mt-12">
-            <ThemeSwitchOption />
-          </div>
-        </div>
+        
       </div>
 
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 p-6 text-center border-t border-neutral-800">

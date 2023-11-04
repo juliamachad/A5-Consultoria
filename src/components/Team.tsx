@@ -8,14 +8,12 @@ const products = [
   {
     foto: "/images/icons/linkedin-logo.png",
     title: "Stefan Würzner",
-    price: 12,
-    currency: "$",
     frecuency: "month",
     description: "Engenharia de Processos Consultoria em Mineração, Siderurgia e Reciclagem.",
     features: [
-      "in stefan-wurzner",
+      "stefan-wurzner",
     ],
-    href: "#",
+    href: "https://www.linkedin.com/in/stefan-wurzner-54972333/",
     cta: "Buy Hobby",
     mostPopular: false,
     linkedin: "/images/icons/linkedin-logo.png",
@@ -23,8 +21,6 @@ const products = [
   {
     foto: "",
     title: "Engenheiros Civis",
-    price: 120,
-    currency: "$",
     frecuency: "year",
     description: "",
     features: [
@@ -38,14 +34,12 @@ const products = [
   {
     foto: "/images/icons/linkedin-logo.png",
     title: "Mislene Rosa",
-    price: 24,
-    currency: "$",
     frecuency: "month",
     description: "Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
     features: [
       "mislene-rosa",
     ],
-    href: "#",
+    href: "https://www.linkedin.com/in/mislene-rosa-70a43441/",
     cta: "Buy Freelancer",
     mostPopular: true,
     linkedin: "/images/icons/linkedin-logo.png",
@@ -53,8 +47,6 @@ const products = [
   {
     foto: "",
     title: "Engenheiros Eletricistas",
-    price: 240,
-    currency: "$",
     frecuency: "year",
     description: "",
     features: [
@@ -68,8 +60,6 @@ const products = [
   {
     foto: "",
     title: "Engenheiros Mecânicos",
-    price: 320,
-    currency: "$",
     frecuency: "year",
     description: "",
     features: [
@@ -83,8 +73,6 @@ const products = [
   {
     foto: "",
     title: "Engenheiros de Minas",
-    price: 480,
-    currency: "$",
     frecuency: "year",
     description: "",
     features: [
@@ -98,8 +86,6 @@ const products = [
   {
     foto: "",
     title: "Técnicos de campo",
-    price: 480,
-    currency: "$",
     frecuency: "year",
     description: "",
     features: [
@@ -159,7 +145,8 @@ export default function Team() {
             frecuency,
             features,
             linkedin,
-            foto
+            foto,
+            href
           }) => {
             if (foto != "") {
             return (
@@ -202,8 +189,11 @@ export default function Team() {
                         
                       </p>
                       {features.map((features) => (
+                       
                         <li key={features} className="leading-6 flex">
+                           <a target="_blank" href={href} style={{display:'flex'}}>
                           <Image
+                            
                             src={linkedin}
                             width={25}
                             height={10}
@@ -212,6 +202,7 @@ export default function Team() {
                           <span className="ml-3 dark:text-neutral-400">
                             {features}
                           </span>
+                          </a>
                         </li>
                       ))}
                     </ul>
