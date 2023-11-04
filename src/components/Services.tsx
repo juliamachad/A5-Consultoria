@@ -29,19 +29,12 @@ const services = [
     image: "/images/services/campo.png",
     alt: "Service description",
   },
-  {
-    title: "Diligenciamento de projetos",
-    description:
-      "voluptatum ex molestiae quae alias quasi eum magnam maxime autem atque",
-    image: "/images/services/diligenciamento.png",
-    alt: "Service description",
-  },
   
 ];
 export function Services() {
   return (
     <div className="bg-gray-50 dark:bg-neutral-900" id="services">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center ">
         <h2 className="text-4xl font-bold">Serviços</h2>
 
         <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
@@ -50,7 +43,7 @@ export function Services() {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16 flex flex-row flex-wrap justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16 grid md:grid-cols-2 flex-row flex-wrap justify-center">
         {services.map(({ title, description, image, alt }) => (
           <div key={title} className="servicos-home " style={{flexBasis: 'auto' }}>
             <div className="h-32 w-32 flex justify-center mx-auto ">
@@ -71,6 +64,25 @@ export function Services() {
           </div>
         ))}
       </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16 flex flex-row flex-wrap justify-center">
+      <div className="servicos-home " style={{flexBasis: 'auto' }}>
+            <div className="h-32 w-32 flex justify-center mx-auto ">
+              <Image
+                src="/images/services/diligenciamento.png"
+                alt="foto"
+                width={130}
+                height={130}
+                quality={75}
+                sizes="100vw"
+                priority
+              />
+            </div>
+            <h2 className="font-bold text-lg text-center">Diligenciamento de projetos</h2>
+            <p className="pt-2 text-base text-center dark:text-neutral-400">
+            voluptatum ex molestiae quae alias quasi eum magnam maxime autem atque
+            </p>
+          </div>
+          </div>
     </div>
   );
 }

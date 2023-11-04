@@ -14,7 +14,7 @@ export function Hero() {
             Bem vindo à <br />{" "}
             <span className="text-orange font-extrabold drop-shadow">A5 Consultoria</span>
           </h1>
-          <p className="pt-6 text-base w-auto  dark:text-neutral-400 text-white" >
+          <p className="pt-6 text-base w-auto  text-white" >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           </p>
           <div className="flex flex-auto pt-10 gap-2 min-w-[350px] justify-center sm:justify-center">

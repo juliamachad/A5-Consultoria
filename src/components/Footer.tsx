@@ -79,7 +79,7 @@ const column3 = [
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-300 dark:text-neutral-400">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-12 grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6">
         <div className="col-span-2 sm:col-span-3 md:col-span-3 lg:col-span-2 2xl:col-span-2">
           <Link href="/">
             <Image
@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="col-start-5">
+        <div className=" lg:col-start-5">
           <h3 className="text-sm md:text-xs font-bold pb-4 pt-12 lg:pt-0">
             Páginas
           </h3>

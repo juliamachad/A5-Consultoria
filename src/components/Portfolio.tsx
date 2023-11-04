@@ -11,7 +11,7 @@ const contents = [
       "Lorem ipsum dolor sit amet consectetur",
       "Lacus eu mauris quisque tortor torquent",
     ],
-    image: "/images/features/dashboard.svg",
+    image: "/images/projects/projeto1.png",
     order: false,
   },
   {
@@ -23,7 +23,7 @@ const contents = [
       "Voluptatum deleniti atque corrupti quos",
       "He endures pains to avoid worse pains",
     ],
-    image: "/images/features/product.svg",
+    image: "/images/projects/projeto2.png",
     order: true,
   },
   {
@@ -35,12 +35,12 @@ const contents = [
       "Quis autem vel eum iure reprehenderit",
       "Consequuntur magni dolores eos qui ratione",
     ],
-    image: "/images/features/inventory.svg",
+    image: "/images/projects/projeto3.png",
     order: false,
   },
 ];
 
-export function Features() {
+export function Portfolio() {
   return (
     <div className="bg-white dark:bg-neutral-900" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-40 pt-16 pb-16">
