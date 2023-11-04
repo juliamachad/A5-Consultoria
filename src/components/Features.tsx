@@ -44,7 +44,7 @@ export function Features() {
   return (
     <div className="bg-white dark:bg-neutral-900" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-40 pt-16 pb-16">
-        <h2 className="text-4xl font-bold text-center">Features</h2>
+        <h2 className="text-4xl font-bold text-center">Projetos</h2>
         <p className="pt-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
           Halley nunc pulvinar lobortis duis. Leo mollis neque ullamcorper
           aliquam sem nullam, elementum vestibulum augue placerat.

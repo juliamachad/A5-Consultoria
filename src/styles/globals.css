@@ -22,3 +22,9 @@
     background-color: #ff9900;
 }
 
+
+@media screen and (max-width:800px) {
+    .pq-bs {
+      margin-top: 30px;
+    }       
+ }    

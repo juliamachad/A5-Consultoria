@@ -8,9 +8,9 @@ export function Hero() {
       backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPositionY:'center',
       width: '100%',
     }}>
-      <div className="max-w-7xl mx-auto pt-20 pb-16 px-4 sm:px-6 lg:px-8 ">
-        <div className="pt-6 md:pt-32 justify-center text-center sm:justify-start sm:text-center">
-          <h1 className="text-5xl font-bold text-white">
+      <div className="max-w-7xl mx-auto pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="pt-6 md:pt-32 justify-center text-center sm:justify-start sm:text-center pq-bs">
+          <h1 className="text-5xl font-bold text-white ">
             Bem vindo à <br />{" "}
             <span className="text-orange font-extrabold">A5 Consultoria</span>
           </h1>
