@@ -52,8 +52,8 @@ export function Services() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16 flex flex-row flex-wrap justify-center">
         {services.map(({ title, description, image, alt }) => (
-          <div key={title} className="servicos-home" style={{flexBasis: 'auto' }}>
-            <div className="h-32 w-32 flex justify-center mx-auto">
+          <div key={title} className="servicos-home " style={{flexBasis: 'auto' }}>
+            <div className="h-32 w-32 flex justify-center mx-auto ">
               <Image
                 src={image}
                 alt={alt}

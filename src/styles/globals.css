@@ -7,19 +7,19 @@
 }
 
 .text-orange{
-    color: #ff9900;
+    color: #EE842D;
 }
 
 .bg-orange{
-    background-color: #ff9900;
+    background-color: #EE842D;
 }
 
 .hover:text-orange:hover{
-    color: #ff9900;
+    color: #EE842D;
 }
 
 .hover:bg-orange:hover{
-    background-color: #ff9900;
+    background-color: #EE842D;
 }
 
 

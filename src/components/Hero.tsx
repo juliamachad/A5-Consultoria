@@ -10,9 +10,9 @@ export function Hero() {
     }}>
       <div className="max-w-7xl mx-auto pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="pt-6 md:pt-32 justify-center text-center sm:justify-start sm:text-center pq-bs">
-          <h1 className="text-5xl font-bold text-white ">
+          <h1 className="text-5xl font-bold text-white drop-shadow">
             Bem vindo à <br />{" "}
-            <span className="text-orange font-extrabold">A5 Consultoria</span>
+            <span className="text-orange font-extrabold drop-shadow">A5 Consultoria</span>
           </h1>
           <p className="pt-6 text-base w-auto  dark:text-neutral-400 text-white" >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

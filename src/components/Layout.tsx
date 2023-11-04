@@ -9,7 +9,7 @@ const Layout = (props: any) => {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "Halley",
+    title: "A5 Consultoria",
     description: `Halley is a landing page template built with Nextjs and Tailwindcss`,
     image: "/images/seo/halley-banner.png",
     type: "website",
@@ -20,7 +20,7 @@ const Layout = (props: any) => {
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
-        <link href="/favicon.ico" rel="shortcut icon" />
+        <link href="/icone.png" rel="shortcut icon" />
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"

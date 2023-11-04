@@ -8,7 +8,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "Sobre", href: "#pricing", current: false },
+  { name: "Sobre", href: "/about", current: false },
   { name: "Serviços", href: "#services", current: false },
   { name: "Portfólio", href: "#faq", current: false },
   //{ name: "Contato", href: "#contact", current: false },
@@ -33,7 +33,7 @@ export default function Navbar() {
                   <Link href="/">
                     <Image
                       className="block h-8 w-auto"
-                      src="/images/logos/logo-rose.svg"
+                      src="/images/logos/logo@4x.png"
                       alt="Logo Your Company"
                       width={150}
                       height={150}
