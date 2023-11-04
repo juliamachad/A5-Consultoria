@@ -1,113 +1,114 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CheckIcon } from "@heroicons/react/24/solid";
+//import linkedin from '../../public/images/icons/linkedin-logo.png'
+import Image from 'next/image'
 
 const products = [
   {
+    foto: "/images/icons/linkedin-logo.png",
     title: "Stefan Würzner",
     price: 12,
     currency: "$",
     frecuency: "month",
-    description: "All the features you need to grow your business.",
+    description: "Engenharia de Processos Consultoria em Mineração, Siderurgia e Reciclagem.",
     features: [
-      "Unlimited vouchers ∞",
-      "02 users",
-      "Point of sale",
-      "Customers",
+      "in stefan-wurzner",
     ],
     href: "#",
     cta: "Buy Hobby",
     mostPopular: false,
+    linkedin: "/images/icons/linkedin-logo.png",
   },
   {
-    title: "Hobby",
+    foto: "",
+    title: "Engenheiros Civis",
     price: 120,
     currency: "$",
     frecuency: "year",
-    description: "All the features you need to grow your business.",
+    description: "",
     features: [
-      "Unlimited vouchers ∞",
-      "02 users",
-      "Point of sale",
-      "Customers",
+      "Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
     ],
     href: "#",
     cta: "Buy Hobby",
     mostPopular: false,
+    linkedin: "",
   },
   {
+    foto: "/images/icons/linkedin-logo.png",
     title: "Mislene Rosa",
     price: 24,
     currency: "$",
     frecuency: "month",
-    description: "All the features you need to grow your business.",
+    description: "Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
     features: [
-      "Unlimited vouchers ∞",
-      "04 users",
-      "02 warehouses",
-      "Dashboard",
-      "Point of sale",
+      "mislene-rosa",
     ],
     href: "#",
     cta: "Buy Freelancer",
     mostPopular: true,
+    linkedin: "/images/icons/linkedin-logo.png",
   },
   {
-    title: "Freelancer",
+    foto: "",
+    title: "Engenheiros Eletricistas",
     price: 240,
     currency: "$",
     frecuency: "year",
-    description: "All the features you need to grow your business.",
+    description: "",
     features: [
-      "Unlimited vouchers ∞",
-      "04 users",
-      "02 warehouses",
-      "Dashboard",
-      "Point of sale",
+      "Especialistas em projetos elétricos e de automação. Experiência em serviços de campo e pesquisa energética eficiente.",
     ],
     href: "#",
     cta: "Buy Freelancer",
     mostPopular: true,
+    linkedin: "",
   },
   {
-    title: "Startup",
+    foto: "",
+    title: "Engenheiros Mecânicos",
     price: 320,
     currency: "$",
     frecuency: "year",
-    description: "All the features you need to grow your business.",
+    description: "",
     features: [
-      "Unlimited vouchers ∞",
-      "08 users",
-      "04 warehouses",
-      "Dashboard",
-      "Point of sale",
-      "Finance",
-      "mobile App",
+      "Especialista na elaboração de projetos Estruturas Metálicas, Caldeiraria, Usinagem, Tubulações, entre outros.",
     ],
     href: "#",
     cta: "Buy Startup",
     mostPopular: false,
+    linkedin: "",
   },
   {
-    title: "Enterprice",
+    foto: "",
+    title: "Engenheiros de Minas",
     price: 480,
     currency: "$",
     frecuency: "year",
-    description: "All the features you need to grow your business.",
+    description: "",
     features: [
-      "Unlimited vouchers ∞",
-      "16 users",
-      "08 warehouses",
-      "Dashboard",
-      "Point of sale",
-      "Inventory",
-      "Shopping",
-      "Finance",
-      "mobile App",
+      "Especialista na realização de estudos sobre a viabilidade técnica e econômica e elaboração de projeto de extração dos minérios.",
     ],
     href: "#",
     cta: "Buy Enterprice",
     mostPopular: false,
+    linkedin: "",
+  },
+  {
+    foto: "",
+    title: "Técnicos de campo",
+    price: 480,
+    currency: "$",
+    frecuency: "year",
+    description: "",
+    features: [
+      "Equipe multidisciplinar, profissionais com grande experiência nas suas especialidades, trabalhando de forma integrada.",
+    ],
+    href: "#",
+    cta: "Buy Enterprice",
+    mostPopular: false,
+    linkedin: "",
   },
 ];
 
@@ -149,30 +150,40 @@ export default function Team() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-16 justify-center">
+      <div className="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-16 justify-center ">
         {products.map(
           ({
             title,
             mostPopular,
             description,
-            currency,
-            price,
             frecuency,
-            cta,
             features,
-            href,
+            linkedin,
+            foto
           }) => {
+            if (foto != "") {
             return (
               <>
                 {billingInterval === frecuency ? (
                   <div
                     key={title}
+                    style={{maxWidth:'500px'}}
                     className={`rounded-lg py-8 relative flex flex-col ${
                       mostPopular
                         ? "border-neutral-300 border dark:border-neutral-600"
                         : "border-neutral-300 border dark:border-neutral-600"
                     }`}
                   >
+                      <div className="flex justify-start pl-8 pb-8">
+                      <Image
+                            src={linkedin}
+                            width={100}
+                            height={10}
+                            alt="Picture of the author"
+                          />
+                    </div>
+        
+                    
                     <h3 className="px-6 text-lg font-semibold leading-5">
                       {title}
                     </h3>
@@ -192,7 +203,12 @@ export default function Team() {
                       </p>
                       {features.map((features) => (
                         <li key={features} className="leading-6 flex">
-                          <CheckIcon className="mt-2 w-3 h-3 text-orange shrink-0" />
+                          <Image
+                            src={linkedin}
+                            width={25}
+                            height={10}
+                            alt="Picture of the author"
+                          />
                           <span className="ml-3 dark:text-neutral-400">
                             {features}
                           </span>
@@ -203,6 +219,52 @@ export default function Team() {
                 ) : null}
               </>
             );
+            } else {
+              return (
+                <>
+                  {billingInterval === frecuency ? (
+                    <div
+                      key={title}
+                      style={{maxWidth:'500px'}}
+                      className={`rounded-lg py-8 relative flex flex-col ${
+                        mostPopular
+                          ? "border-neutral-300 border dark:border-neutral-600"
+                          : "border-neutral-300 border dark:border-neutral-600"
+                      }`}
+                    >
+                      
+          
+                      
+                      <h3 className="px-6 text-lg font-semibold leading-5">
+                        {title}
+                      </h3>
+                      
+  
+                      <p className="px-6 mt-4 leading-6 dark:text-neutral-400">
+                        {description}
+                      </p>
+                    
+  
+                      
+  
+                      {/* features */}
+                      <ul className="mt-6 px-6 space-y-4 flex-1 border-t border-neutral-300 dark:border-neutral-500">
+                        <p className="mt-6 font-semibold dark:text-neutral-300">
+                          
+                        </p>
+                        {features.map((features) => (
+                          <li key={features} className="leading-6 flex">
+                            <span className="ml-3 dark:text-neutral-400">
+                              {features}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </>
+              );
+            }
           }
         )}
       </div>
