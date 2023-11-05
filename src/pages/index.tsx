@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-     {i18next.t('title')}
       <Services />
       <Portfolio />
     </Layout>
