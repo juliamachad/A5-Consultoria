@@ -3,7 +3,6 @@ import Link from "next/link";
 import bg from '../../public/images/backgrounds/mina.png'
 
 import { useTranslation } from 'react-i18next';
-import i18next from "../pages/i18n";
 
 export function Hero() {
   const { t, i18n } = useTranslation();
