@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { useTranslation } from 'react-i18next';
-import '../pages/i18n'
+import '../lib/i18n.js'
 
 export default function LanguageSwitchButton() {
     const [mounted, setMounted] = useState(false);
