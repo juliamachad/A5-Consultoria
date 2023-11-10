@@ -3,7 +3,7 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 
 const contents = [
   {
-    title: "Dashboard",
+    title: "Projeto 1",
     description:
       "Euismod fames in felis ornare interdum phasellus imperdiet habitant, elementum leo lobortis facilisis suscipit nullam.",
     features: [
@@ -15,7 +15,7 @@ const contents = [
     order: false,
   },
   {
-    title: "Products",
+    title: "Projeto 2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus at modi ea tempore sapiente optio, quas sint nobis pariatur.",
     features: [
@@ -27,7 +27,7 @@ const contents = [
     order: true,
   },
   {
-    title: "Inventory",
+    title: "Projeto 3",
     description:
       "Porta facilisis ullamcorper rutrum erat luctus aliquam phasellus pharetra fusce, aliquet montes turpis mus habitasse lectus lacinia.",
     features: [
