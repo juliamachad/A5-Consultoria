@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CheckIcon } from "@heroicons/react/24/solid";
+import { useTheme } from 'next-themes';
 //import linkedin from '../../public/images/icons/linkedin-logo.png'
 import Image from 'next/image'
 
@@ -101,6 +102,8 @@ const products = [
 type BillingInterval = "year" | "month";
 
 export default function Team() {
+  const [mounted, setMounted] = useState(false);
+const { resolvedTheme, setTheme } = useTheme();
   const [billingInterval, setBillingInterval] =
     useState<BillingInterval>("month");
   return (
@@ -156,7 +159,7 @@ export default function Team() {
                   <div
                     key={title}
                     style={{maxWidth:'500px'}}
-                    className={`rounded-lg py-8 relative flex flex-col ${
+                    className={`rounded-lg py-8 relative flex flex-col lg:h-96 ${
                       mostPopular
                         ? "border-neutral-300 border dark:border-neutral-600"
                         : "border-neutral-300 border dark:border-neutral-600"
@@ -185,7 +188,7 @@ export default function Team() {
                     
 
                     {/* features */}
-                    <ul className="mt-6 px-6 space-y-4 flex-1 border-t border-neutral-300 dark:border-neutral-500">
+                    <ul className="mt-6 px-6 space-y-4 flex-1 border-t border-neutral-300 dark:border-neutral-500 flex items-center">
                       <p className="mt-6 font-semibold dark:text-neutral-300">
                         
                       </p>
@@ -193,13 +196,29 @@ export default function Team() {
                        
                         <li key={features} className="leading-6 flex">
                            <a target="_blank" href={href} style={{display:'flex'}}>
-                          <Image
-                            
-                            src={linkedin}
-                            width={25}
-                            height={10}
-                            alt="Picture of the author"
-                          />
+                        {resolvedTheme === "dark" ? (
+                        <Image
+                        className=""
+                        src="/images/icons/in-white.svg"
+                        alt="Logo Your Company"
+                        width={25}
+                        height={10}
+                        quality={75}
+                        sizes="100vw"
+                      />
+
+                    ) : (
+                      <Image
+                      className=""
+                      src="/images/icons/in-black.svg"
+                      alt="Logo Your Company"
+                      width={25}
+                      height={10}
+                      quality={75}
+                      sizes="100vw"
+                    />
+
+                    )}
                           <span className="ml-3 dark:text-neutral-400">
                             {features}
                           </span>
@@ -218,7 +237,7 @@ export default function Team() {
                     <div
                       key={title}
                       style={{maxWidth:'500px'}}
-                      className={`rounded-lg py-8 relative flex flex-col ${
+                      className={`rounded-lg py-8 relative flex flex-col  lg:h-96 ${
                         mostPopular
                           ? "border-neutral-300 border dark:border-neutral-600"
                           : "border-neutral-300 border dark:border-neutral-600"
