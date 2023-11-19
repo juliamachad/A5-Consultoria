@@ -1,24 +1,35 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 const faqitems = [
-  {
-    question: "What is your refund policy?",
+  { 
+    image: "/images/services/consultoria.png",
+    question: "Consultoria",
     response:
       "If youre unhappy with your purchase for any reason, email us within 90 days and well refund you in full, no questions asked.",
   },
   {
-    question: "Do you offer technical support?",
+    image: "/images/services/processos.png",
+    question: "Engenharia de processos",
     response:
       "No, we dont offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question: "What is your refund policy? If youre unhappy with your purchase for any reasonIf youre unhappy with your purchase for any reasonIf youre unhappy with your purchase for any reason",
+    image: "/images/services/produtos.png",
+    question: "Engenharia de produtos",
     response:
       "If youre unhappy with your purchase for any reason, email us within 90 days and well refund you in full, no questions asked.",
   },
   {
-    question: "What forms of payment do you accept?",
+    image: "/images/services/campo.png",
+    question: "Serviço de campo",
+    response:
+      "You can use any debit or credit card to pay for a subscription. We secure your card details and process payments via Stripe. Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+  },
+  {
+    image: "/images/services/diligenciamento.png",
+    question: "Diligenciamento de projetos",
     response:
       "You can use any debit or credit card to pay for a subscription. We secure your card details and process payments via Stripe. Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
   },
@@ -31,15 +42,11 @@ export default function Faq() {
       id="faq"
     >
       <h2 className="text-4xl font-bold text-center">
-        Frequently Asked Questions
+        O que fazemos
       </h2>
 
-      <p className="pt-6 pb-16 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
-      </p>
       <div className="mx-auto w-full max-w-2xl rounded-2xl bg-transparent dark:bg-transparent">
-        {faqitems.map(({ question, response }) => (
+        {faqitems.map(({ question, response, image}) => (
           <div key={question}>
             <Disclosure>
               {({ open }) => (
@@ -51,7 +58,18 @@ export default function Faq() {
                         : ""
                     } flex w-full justify-between rounded-lg bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-800 px-4 py-4 text-left text-base font-medium `}
                   >
-                    <h2 className="font-semibold">{question}</h2>
+                    <div className="flex flex-start">
+                      <Image
+                      src={image}
+                      width={30}
+                      height={30}
+                      quality={75}
+                      sizes="100vw"
+                      priority
+                      alt="oi"
+                      className="mr-3"
+                    />
+                    <h2 className="font-semibold">{question}</h2></div>
                     <ChevronDownIcon
                       className={`${
                         open ? "rotate-180 transition-transform" : ""

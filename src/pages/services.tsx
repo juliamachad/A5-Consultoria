@@ -7,7 +7,7 @@ import Faq from "@/components/Faq";
 export default function Home() {
   return (
     <Layout>
-      <Banner backgroundImage="/images/backgrounds/sobre.png" text="Nossos Serviços"/>
+      <Banner backgroundImage="/images/backgrounds/servicos.png" text="Nossos Serviços"/>
       <Faq />
     </Layout>
   );
