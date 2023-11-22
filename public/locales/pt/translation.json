@@ -12,5 +12,25 @@
     "services": "Serviços",
     "portfolio": "Portfolio",
     "contact": "Contato"
+  },
+  "contact": {
+    "title": "Contato",
+    "description": "Descricao em portugues",
+    "company": "A5 Consultoria",
+    "message": "Tem alguma coisa pra falar? We are here to help. Fill up the form or send email or call phone.",
+    "adress": "avenida tal numero tal",
+    "email": "aibdsab@asdaoi.com",
+    "phone": "99888998909",
+    "form-name": "Nome completo",
+    "form-email": "Email",
+    "form-message": "Sua mensagem",
+    "form-send": "Enviar",
+    "form-sucess": "Sucesso",
+    "form-back": "Voltar",
+    "form-error": "Ops, algo deu errado!",
+    "form-again": "Tentar de novo",
+    "name-required": "Preencha seu nome",
+    "email-required": "Informe seu email",
+    "message-required": "Escreva sua mensagem"
   }
 }

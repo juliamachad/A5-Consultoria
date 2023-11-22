@@ -4,6 +4,7 @@ import { useForm, useWatch } from "react-hook-form";
 import { MapIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "react-i18next";
 
 type Info = {
   access_key: string;
@@ -16,6 +17,7 @@ type Info = {
 };
 
 export default function Contact() {
+  const { t, i18n } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -59,35 +61,33 @@ export default function Contact() {
   return (
     <div className="bg-gray-50 dark:bg-neutral-900" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
-        <h2 className="text-4xl font-bold">Contact</h2>
+        <h2 className="text-4xl font-bold">{t('contact.title')} </h2>
 
         <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
-          Want to contact us? Choose an option below and well be happy to show
-          you how Halley can transform her companys web experience.
+        {t('contact.description')}
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16">
         <div>
-          <h2 className="text-lg font-bold">Contact Halley</h2>
+          <h2 className="text-lg font-bold">{t('contact.company')}</h2>
           <p className="max-w-sm mt-4 mb-4 dark:text-neutral-400">
-            Have something to say? We are here to help. Fill up the form or send
-            email or call phone.
+          {t('contact.message')}
           </p>
 
           <div className="flex items-center mt-8 space-x-2 text-dark-600 dark:text-neutral-400">
             <MapIcon className="w-4 h-4" />
-            <span>Av Tomas Marsano 700, Lima - Perú</span>
+            <span>{t('contact.adress')}</span>
           </div>
 
           <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
             <EnvelopeIcon className="w-4 h-4" />
-            <a href="mailto:hello@halley.vercel.app">hello@halley.vercel.app</a>
+            <a href="mailto:hello@halley.vercel.app">{t('contact.email')}</a>
           </div>
 
           <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
             <PhoneIcon className="w-4 h-4" />
-            <a href="tel:51931999999">+51 931999999</a>
+            <a href="tel:51931999999">{t('contact.phone')}</a>
           </div>
         </div>
 
@@ -112,7 +112,7 @@ export default function Contact() {
               <div className="mb-5">
                 <input
                   type="text"
-                  placeholder="Full Name"
+                  placeholder={t('contact.form-name')}
                   autoComplete="false"
                   className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white rounded-md outline-none dark:placeholder:text-neutral-200 dark:bg-neutral-900 focus:ring-4 ${
                     errors.name
@@ -120,7 +120,7 @@ export default function Contact() {
                       : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
                   }`}
                   {...register("name", {
-                    required: "Full name is required",
+                    required: t('contact.name-required'),
                     maxLength: 80,
                   })}
                 />
@@ -133,12 +133,12 @@ export default function Contact() {
 
               <div className="mb-5">
                 <label htmlFor="email_address" className="sr-only">
-                  Email Address
+                {t('contact.form-email')}
                 </label>
                 <input
                   id="email_address"
                   type="email"
-                  placeholder="Email Address"
+                  placeholder={t('contact.form-email')}
                   // name="email"
                   autoComplete="false"
                   className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white rounded-md outline-none dark:placeholder:text-neutral-200 dark:bg-neutral-900   focus:ring-4  ${
@@ -147,10 +147,10 @@ export default function Contact() {
                       : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
                   }`}
                   {...register("email", {
-                    required: "Enter your email",
+                    required: t('contact.email-required'),
                     pattern: {
                       value: /^\S+@\S+$/i,
-                      message: "Please enter a valid email",
+                      message: t('contact.email-required'),
                     },
                   })}
                 />
@@ -164,13 +164,13 @@ export default function Contact() {
               <div className="mb-3">
                 <textarea
                   // name="message"
-                  placeholder="Your Message"
+                  placeholder={t('contact.form-message')}
                   className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white dark:placeholder:text-neutral-200 dark:bg-neutral-900   rounded-md outline-none  h-36 focus:ring-4  ${
                     errors.message
                       ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
                       : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
                   }`}
-                  {...register("message", { required: "Enter your Message" })}
+                  {...register("message", { required: t('contact.message-required') })}
                 />
                 {errors.message && (
                   <div className="mt-1 text-orange">
@@ -205,7 +205,7 @@ export default function Contact() {
                     ></path>
                   </svg>
                 ) : (
-                  "Send Message"
+                  t('contact.form-send')
                 )}
               </button>
             </form>
@@ -229,7 +229,7 @@ export default function Contact() {
                   />
                 </svg>
                 <h3 className="py-5 text-2xl font-medium text-green-500">
-                  Success
+                {t('contact.form-sucess')}
                 </h3>
                 <p className="text-neutral-900 dark:text-neutral-300 md:px-4">
                   {Message}
@@ -238,7 +238,7 @@ export default function Contact() {
                   className="mt-6 py-2 px-4 bg-orange rounded-full focus:outline-none text-neutral-100"
                   onClick={() => reset()}
                 >
-                  Go back
+                  {t('contact.form-back')}
                 </button>
               </div>
             </>
@@ -262,7 +262,7 @@ export default function Contact() {
               </svg>
 
               <h3 className=" py-5 text-2xl font-medium text-orange">
-                Oops, Something went wrong!
+              {t('contact.form-error')}
               </h3>
               <p className="text-neutral-900 dark:text-neutral-300 md:px-4">
                 {Message}
@@ -271,7 +271,7 @@ export default function Contact() {
                 className="mt-6 py-2 px-4 bg-orange rounded-full focus:outline-none text-neutral-100"
                 onClick={() => reset()}
               >
-                Try Again
+                {t('contact.form-again')}
               </button>
             </div>
           )}
