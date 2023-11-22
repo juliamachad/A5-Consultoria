@@ -31,5 +31,9 @@
     "name-required": "Name required",
     "email-required": "Email required",
     "message-required": "Write your message"
+  },
+  "footer": {
+    "description": "Here a description of the company",
+    "pages": "Pages"
   }
 } 

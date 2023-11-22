@@ -32,5 +32,9 @@
     "name-required": "Preencha seu nome",
     "email-required": "Informe seu email",
     "message-required": "Escreva sua mensagem"
+  },
+  "footer": {
+    "description": "Descricao da empresa aqui",
+    "pages": "Páginas"
   }
 }
