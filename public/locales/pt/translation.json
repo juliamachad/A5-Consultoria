@@ -6,8 +6,11 @@
     "description": "Aqui vai uma descricao em portugues",
     "button": "Sobre nós"
   },
-  "description": {
-    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "part2": "Switch language between english and german using buttons above."
+  "navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "portfolio": "Portfolio",
+    "contact": "Contato"
   }
 }

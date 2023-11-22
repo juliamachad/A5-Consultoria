@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import ThemeSwitchButton from "./ThemeSwitchButton";
+
+
+import { useTranslation } from 'react-i18next';
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
@@ -10,19 +14,20 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import LanguageSwitchButton from "./LanguageSwitchButton";
 
-const navigation = [
-  { name: "Home", href: "/", current: false },
-  { name: "Sobre", href: "/about", current: false },
-  { name: "Serviços", href: "/services", current: false },
-  { name: "Portfólio", href: "/portfolio", current: false },
-  //{ name: "Contato", href: "#contact", current: false },
-];
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
+  const navigation = [
+    { name: t('navbar.home'), href: "/", current: false },
+    { name: t('navbar.about'), href: "/about", current: false },
+    { name: t('navbar.services'), href: "/services", current: false },
+    { name: t('navbar.portfolio'), href: "/portfolio", current: false },
+    //{ name: "Contato", href: "#contact", current: false },
+  ];
 
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -92,7 +97,7 @@ export default function Navbar() {
                     className="hidden sm:block"
                   >
                     <button className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 p-2 text-base font-medium dark:hover:bg-orange hover:bg-orange hover:text-white dark:hover:text-white rounded-full">
-                      Contato
+                    {t('navbar.contact')}
                     </button>
                   </Link>
                   <LanguageSwitchButton></LanguageSwitchButton>
@@ -135,7 +140,20 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              
+              <Link
+                  href="/contato"
+                  className={"text-neutral-900 dark:text-neutral-400 block py-4 text-base font-medium border-b border-neutral-200 dark:border-neutral-700"
+                  }
+                >
+                  <button className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 p-2 text-base font-medium dark:hover:bg-orange hover:bg-orange hover:text-white dark:hover:text-white rounded-full">
+                    {t('navbar.contact')}
+                    </button>
+                </Link>
+                <div className="flex flex-row">
+                <LanguageSwitchButton></LanguageSwitchButton>
+                  <ThemeSwitchButton />
+                </div>
+                
             </div>
           </Disclosure.Panel>
         </>

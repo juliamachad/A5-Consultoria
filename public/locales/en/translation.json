@@ -1,13 +1,15 @@
 {
-  "title": "Welcome to react using react-i18next",
   "hero": {
     "welcome": "Welcome to",
     "company": "A5 Consulting",
     "description": "Aqui vai uma descricao em ingles",
     "button": "About us"
   },
-  "description": {
-    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "part2": "Switch language between english and german using buttons above."
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
   }
 } 
