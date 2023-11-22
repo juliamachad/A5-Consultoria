@@ -1,53 +1,52 @@
 import Image from "next/image";
 import { CheckIcon } from "@heroicons/react/24/solid";
+import { useTranslation } from 'react-i18next';
 
-const contents = [
-  {
-    title: "Projeto 1",
-    description:
-      "Euismod fames in felis ornare interdum phasellus imperdiet habitant, elementum leo lobortis facilisis suscipit nullam.",
-    features: [
-      "Lacus eu mauris quisque tortor torquent",
-      "Lorem ipsum dolor sit amet consectetur",
-      "Lacus eu mauris quisque tortor torquent",
-    ],
-    image: "/images/projects/projeto1.png",
-    order: false,
-  },
-  {
-    title: "Projeto 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus at modi ea tempore sapiente optio, quas sint nobis pariatur.",
-    features: [
-      "But I must explain to you how all this mistaken",
-      "Voluptatum deleniti atque corrupti quos",
-      "He endures pains to avoid worse pains",
-    ],
-    image: "/images/projects/projeto2.png",
-    order: true,
-  },
-  {
-    title: "Projeto 3",
-    description:
-      "Porta facilisis ullamcorper rutrum erat luctus aliquam phasellus pharetra fusce, aliquet montes turpis mus habitasse lectus lacinia.",
-    features: [
-      "Sed ut perspiciatis unde omnis iste natus",
-      "Quis autem vel eum iure reprehenderit",
-      "Consequuntur magni dolores eos qui ratione",
-    ],
-    image: "/images/projects/projeto3.png",
-    order: false,
-  },
-];
 
 export function Portfolio() {
+  const { t, i18n } = useTranslation();
+  const contents = [
+    {
+      title: t('projetos.1title'),
+      description: t('projetos.1description'),
+      features: [
+        t('projetos.1features1'),
+        t('projetos.1features2'),
+        t('projetos.1features3'),
+      ],
+      image: "/images/projects/projeto1.png",
+      order: false,
+    },
+    {
+      title: t('projetos.2title'),
+      description:t('projetos.2description'),
+      features: [
+        t('projetos.2features1'),
+        t('projetos.2features2'),
+        t('projetos.2features3'),
+      ],
+      image: "/images/projects/projeto2.png",
+      order: true,
+    },
+    {
+      title: t('projetos.3title'),
+      description:t('projetos.3description'),
+      features: [
+        t('projetos.3features1'),
+        t('projetos.3features2'),
+        t('projetos.3features3'),
+      ],
+      image: "/images/projects/projeto3.png",
+      order: false,
+    },
+  ];
+
   return (
     <div className="bg-white dark:bg-neutral-900" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-40 pt-16 pb-16">
-        <h2 className="text-4xl font-bold text-center">Projetos</h2>
+        <h2 className="text-4xl font-bold text-center">{t('portfolio.title')}</h2>
         <p className="pt-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
-          Halley nunc pulvinar lobortis duis. Leo mollis neque ullamcorper
-          aliquam sem nullam, elementum vestibulum augue placerat.
+        {t('portfolio.description')}
         </p>
 
         {contents.map((content) => (

@@ -10,7 +10,7 @@ const Layout = (props: any) => {
   const router = useRouter();
   const meta = {
     title: "A5 Consultoria",
-    description: `Halley is a landing page template built with Nextjs and Tailwindcss`,
+    description: ``,
     image: "/images/seo/halley-banner.png",
     type: "website",
     ...customMeta,

@@ -35,5 +35,26 @@
   "footer": {
     "description": "Here a description of the company",
     "pages": "Pages"
+  },
+  "projetos": {
+    "1title": "Project 1",
+    "2title": "Project 2",
+    "3title": "Project 3",
+    "1description": "something about 1 here",
+    "2description": "something about 2 here",
+    "3description": "something about 3 here",
+    "1features1": "Lacus eu mauris quisque tortor torquent",
+    "1features2":  "Lorem ipsum dolor sit amet consectetur",
+    "1features3": "Lacus eu mauris quisque tortor torquent",
+    "2features1": "Lacus eu mauris quisque tortor torquent",
+    "2features2":  "Lorem ipsum dolor sit amet consectetur",
+    "2features3": "Lacus eu mauris quisque tortor torquent",
+    "3features1": "Lacus eu mauris quisque tortor torquent",
+    "3features2":  "Lorem ipsum dolor sit amet consectetur",
+    "3features3": "Lacus eu mauris quisque tortor torquent"
+  },
+  "portfolio":{
+    "title": "Projects",
+    "description": "Here a description in english"
   }
 } 
