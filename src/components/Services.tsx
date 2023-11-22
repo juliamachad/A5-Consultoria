@@ -1,45 +1,47 @@
 import Image from "next/image";
+import { useTranslation } from 'react-i18next';
 
-const services = [
-  {
-    title: "Consultoria",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit laudantium",
-    image: "/images/services/consultoria.png",
-    alt: "Service description",
-  },
-  {
-    title: "Engenharia de processos",
-    description:
-      "Nemo quos doloribus quo omnis mollitia nostrum excepturi impedit veniam ",
-    image: "/images/services/processos.png",
-    alt: "Service description",
-  },
-  {
-    title: "Engenharia de produtos",
-    description:
-      "Accusantium eius omnis minus debitis est odio earum labore ad itaque mollitia",
-    image: "/images/services/produtos.png",
-    alt: "Service description",
-  },
-  {
-    title: "Serviço de campo",
-    description:
-      "Dolores nemo labore soluta incidunt cumque repellat quod ducimus explicabo",
-    image: "/images/services/campo.png",
-    alt: "Service description",
-  },
-  
-];
+
 export function Services() {
+  const { t, i18n } = useTranslation();
+
+  const services = [
+    {
+      title: t('services.1title'),
+      description: t('services.1subtitle'),
+      image: "/images/services/consultoria.png",
+      alt: "Service description",
+    },
+    {
+      title: t('services.2title'),
+      description: t('services.2subtitle'),
+      image: "/images/services/processos.png",
+      alt: "Service description",
+    },
+    {
+      title: t('services.3title'),
+      description: t('services.3subtitle'),
+      image: "/images/services/produtos.png",
+      alt: "Service description",
+    },
+    {
+      title: t('services.4title'),
+      description: t('services.4subtitle'),
+      image: "/images/services/campo.png",
+      alt: "Service description",
+    },
+    
+  ];
+
   return (
     <div className="bg-gray-50 dark:bg-neutral-900" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center ">
-        <h2 className="text-4xl font-bold">Serviços</h2>
+        <h2 className="text-4xl font-bold">
+          {t('services.titlesection')}
+        </h2>
 
         <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
-          Halley is consectetur Obcaecati veniam explicabo perspiciatis sapiente
-          saepe sequi atque aut ullam aliquam.
+        {t('services.descriptionsection')}
         </p>
       </div>
 
@@ -77,9 +79,9 @@ export function Services() {
                 priority
               />
             </div>
-            <h2 className="font-bold text-lg text-center">Diligenciamento de projetos</h2>
+            <h2 className="font-bold text-lg text-center">{t('services.5title')}</h2>
             <p className="pt-2 text-base text-center dark:text-neutral-400">
-            voluptatum ex molestiae quae alias quasi eum magnam maxime autem atque
+           {t('services.5title')}
             </p>
           </div>
           </div>

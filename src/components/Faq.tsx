@@ -1,48 +1,47 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import { useTranslation } from 'react-i18next';
 
-const faqitems = [
-  { 
-    image: "/images/services/consultoria.png",
-    question: "Consultoria",
-    response:
-      "If youre unhappy with your purchase for any reason, email us within 90 days and well refund you in full, no questions asked.",
-  },
-  {
-    image: "/images/services/processos.png",
-    question: "Engenharia de processos",
-    response:
-      "No, we dont offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
-  },
-  {
-    image: "/images/services/produtos.png",
-    question: "Engenharia de produtos",
-    response:
-      "If youre unhappy with your purchase for any reason, email us within 90 days and well refund you in full, no questions asked.",
-  },
-  {
-    image: "/images/services/campo.png",
-    question: "Serviço de campo",
-    response:
-      "You can use any debit or credit card to pay for a subscription. We secure your card details and process payments via Stripe. Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-  },
-  {
-    image: "/images/services/diligenciamento.png",
-    question: "Diligenciamento de projetos",
-    response:
-      "You can use any debit or credit card to pay for a subscription. We secure your card details and process payments via Stripe. Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-  },
-];
 
 export default function Faq() {
+  const { t, i18n } = useTranslation();
+
+  const faqitems = [
+    { 
+      image: "/images/services/consultoria.png",
+      question: t('services.1title'),
+      response:t('services.1description'),
+    },
+    {
+      image: "/images/services/processos.png",
+      question: t('services.2title'),
+      response:t('services.2description'),
+    },
+    {
+      image: "/images/services/produtos.png",
+      question: t('services.3title'),
+      response:t('services.3description'),
+    },
+    {
+      image: "/images/services/campo.png",
+      question: t('services.4title'),
+      response:t('services.4description'),
+    },
+    {
+      image: "/images/services/diligenciamento.png",
+      question: t('services.5title'),
+      response:t('services.5description'),
+    },
+  ];
+
   return (
     <div
       className="bg-white dark:bg-neutral-900 w-full px-4 pt-16 pb-16"
       id="faq"
     >
       <h2 className="text-4xl font-bold text-center">
-        O que fazemos
+        {t('services.titlepage')}
       </h2>
 
       <div className="mx-auto w-full max-w-2xl rounded-2xl bg-transparent dark:bg-transparent">

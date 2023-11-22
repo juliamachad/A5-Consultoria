@@ -57,5 +57,26 @@
   "portfolio":{
     "title": "Projetos",
     "description": "Aqui vai uma descricao em portugues"
+  },
+  "services":{
+    "titlesection": "Serviços",
+    "titlepage": "O que fazemos",
+    "descriptionsection": "Veja tudo o que oferecemos",
+
+    "1title": "Consultoria",
+    "1subtitle": "Uma expliacao curta aqui",
+    "1description": "Alguma explicacao de consultoria aqui",
+    "2title": "Engenharia de processos",
+    "2subtitle": "Uma expliacao curta aqui",
+    "2description": "Alguma explicacao de Engenharia de processos aqui",
+    "3title": "Engenharia de produtos",
+    "3subtitle": "Uma expliacao curta aqui",
+    "3description": "Alguma explicacao de Engenharia de produtos aqui",
+    "4title": "Serviço de campo",
+    "4subtitle": "Uma expliacao curta aqui",
+    "4description": "Alguma explicacao de Serviço de campo aqui",
+    "5title": "Diligenciamento de projetos",
+    "5subtitle": "Uma expliacao curta aqui",
+    "5description": "Alguma explicacao de Diligenciamento de projetos aqui"
   }
 }
