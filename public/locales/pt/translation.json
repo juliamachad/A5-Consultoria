@@ -78,5 +78,22 @@
     "5title": "Diligenciamento de projetos",
     "5subtitle": "Uma expliacao curta aqui",
     "5description": "Alguma explicacao de Diligenciamento de projetos aqui"
+  },
+  "team": {
+    "stefandescription": "Engenharia de Processos Consultoria em Mineração, Siderurgia e Reciclagem.",
+    "mislenedescription":"Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
+    "civiltitle": "Engenheiros Civis",
+    "civildescription": "Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
+    "eletricotitle": "Engenheiros Eletricistas",
+    "eletricodescription": "Especialistas em projetos elétricos e de automação. Experiência em serviços de campo e pesquisa energética eficiente.",
+    "mecanicotitle": "Engenheiros Mecânicos",
+    "mecanicodescription": "Especialista na elaboração de projetos Estruturas Metálicas, Caldeiraria, Usinagem, Tubulações, entre outros.",
+    "minastitle":"Engenheiros de Minas",
+    "minasdescription":"Especialista na realização de estudos sobre a viabilidade técnica e econômica e elaboração de projeto de extração dos minérios.",
+    "campotitle": "Técnicos de campo",
+    "campodescription": "Equipe multidisciplinar, profissionais com grande experiência nas suas especialidades, trabalhando de forma integrada.",
+    "teamtitle": "Equipe",
+    "teamsubtitle": "Equipe",
+    "supportsubtitle": "Suporte"
   }
 }

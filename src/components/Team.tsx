@@ -4,104 +4,109 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 import { useTheme } from 'next-themes';
 //import linkedin from '../../public/images/icons/linkedin-logo.png'
 import Image from 'next/image'
+import { useTranslation } from 'react-i18next';
 
-const products = [
-  {
-    foto: "/images/icons/linkedin-logo.png",
-    title: "Stefan Würzner",
-    frecuency: "month",
-    description: "Engenharia de Processos Consultoria em Mineração, Siderurgia e Reciclagem.",
-    features: [
-      "stefan-wurzner",
-    ],
-    href: "https://www.linkedin.com/in/stefan-wurzner-54972333/",
-    cta: "Buy Hobby",
-    mostPopular: false,
-    linkedin: "/images/icons/linkedin-logo.png",
-  },
-  {
-    foto: "",
-    title: "Engenheiros Civis",
-    frecuency: "year",
-    description: "",
-    features: [
-      "Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
-    ],
-    href: "#",
-    cta: "Buy Hobby",
-    mostPopular: false,
-    linkedin: "",
-  },
-  {
-    foto: "/images/icons/linkedin-logo.png",
-    title: "Mislene Rosa",
-    frecuency: "month",
-    description: "Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
-    features: [
-      "mislene-rosa",
-    ],
-    href: "https://www.linkedin.com/in/mislene-rosa-70a43441/",
-    cta: "Buy Freelancer",
-    mostPopular: true,
-    linkedin: "/images/icons/linkedin-logo.png",
-  },
-  {
-    foto: "",
-    title: "Engenheiros Eletricistas",
-    frecuency: "year",
-    description: "",
-    features: [
-      "Especialistas em projetos elétricos e de automação. Experiência em serviços de campo e pesquisa energética eficiente.",
-    ],
-    href: "#",
-    cta: "Buy Freelancer",
-    mostPopular: true,
-    linkedin: "",
-  },
-  {
-    foto: "",
-    title: "Engenheiros Mecânicos",
-    frecuency: "year",
-    description: "",
-    features: [
-      "Especialista na elaboração de projetos Estruturas Metálicas, Caldeiraria, Usinagem, Tubulações, entre outros.",
-    ],
-    href: "#",
-    cta: "Buy Startup",
-    mostPopular: false,
-    linkedin: "",
-  },
-  {
-    foto: "",
-    title: "Engenheiros de Minas",
-    frecuency: "year",
-    description: "",
-    features: [
-      "Especialista na realização de estudos sobre a viabilidade técnica e econômica e elaboração de projeto de extração dos minérios.",
-    ],
-    href: "#",
-    cta: "Buy Enterprice",
-    mostPopular: false,
-    linkedin: "",
-  },
-  {
-    foto: "",
-    title: "Técnicos de campo",
-    frecuency: "year",
-    description: "",
-    features: [
-      "Equipe multidisciplinar, profissionais com grande experiência nas suas especialidades, trabalhando de forma integrada.",
-    ],
-    href: "#",
-    cta: "Buy Enterprice",
-    mostPopular: false,
-    linkedin: "",
-  },
-];
+
 
 type BillingInterval = "year" | "month";
 
 export default function Team() {
+  const { t, i18n } = useTranslation();
+
+  const products = [
+    {
+      foto: "/images/icons/linkedin-logo.png",
+      title: "Stefan Würzner",
+      frecuency: "month",
+      description: t('team.stefandescription'),
+      features: [
+        "stefan-wurzner",
+      ],
+      href: "https://www.linkedin.com/in/stefan-wurzner-54972333/",
+      cta: "Buy Hobby",
+      mostPopular: false,
+      linkedin: "/images/icons/linkedin-logo.png",
+    },
+    {
+      foto: "/images/icons/linkedin-logo.png",
+      title: "Mislene Rosa",
+      frecuency: "month",
+      description: t('team.mislenedescription'),
+      features: [
+        "mislene-rosa",
+      ],
+      href: "https://www.linkedin.com/in/mislene-rosa-70a43441/",
+      cta: "Buy Freelancer",
+      mostPopular: true,
+      linkedin: "/images/icons/linkedin-logo.png",
+    },
+    {
+      foto: "",
+      title: t('team.civiltitle'),
+      frecuency: "year",
+      description: "",
+      features: [
+        t('team.civildescription')
+      ],
+      href: "#",
+      cta: "Buy Hobby",
+      mostPopular: false,
+      linkedin: "",
+    },
+    {
+      foto: "",
+      title: t('team.eletricotitle'),
+      frecuency: "year",
+      description: "",
+      features: [
+        t('team.eletricodescription'),
+      ],
+      href: "#",
+      cta: "Buy Freelancer",
+      mostPopular: true,
+      linkedin: "",
+    },
+    {
+      foto: "",
+      title: t('team.mecanicotitle'),
+      frecuency: "year",
+      description: "",
+      features: [
+        t('team.mecanicodescription'),
+      ],
+      href: "#",
+      cta: "Buy Startup",
+      mostPopular: false,
+      linkedin: "",
+    },
+    {
+      foto: "",
+      title: t('team.minastitle'),
+      frecuency: "year",
+      description: "",
+      features: [
+        t('team.minasdescription'),
+      ],
+      href: "#",
+      cta: "Buy Enterprice",
+      mostPopular: false,
+      linkedin: "",
+    },
+    {
+      foto: "",
+      title: t('team.campotitle'),
+      frecuency: "year",
+      description: "",
+      features: [
+        t('team.campodescription'),
+      ],
+      href: "#",
+      cta: "Buy Enterprice",
+      mostPopular: false,
+      linkedin: "",
+    },
+  ];
+
   const [mounted, setMounted] = useState(false);
 const { resolvedTheme, setTheme } = useTheme();
   const [billingInterval, setBillingInterval] =
@@ -109,7 +114,7 @@ const { resolvedTheme, setTheme } = useTheme();
   return (
     <div className="bg-gray-50 dark:bg-neutral-900" id="pricing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <h2 className="text-4xl font-bold text-center">Equipe</h2>
+        <h2 className="text-4xl font-bold text-center">{t('team.teamtitle')}</h2>
       </div>
 
       <div className="mx-auto px-4 sm:px-6 lg:px-8 sm:flex sm:flex-col sm:align-center">
@@ -123,7 +128,7 @@ const { resolvedTheme, setTheme } = useTheme();
                 : "ml-0.5 relative w-1/2 text-neutral-900 dark:text-neutral-400"
             } rounded-md m-1 py-2 whitespace-nowrap sm:w-auto sm:px-8`}
           >
-            Equipe
+            {t('team.teamsubtitle')}
           </button>
           <button
             onClick={() => setBillingInterval("year")}
@@ -134,7 +139,7 @@ const { resolvedTheme, setTheme } = useTheme();
                 : "ml-0.5 relative w-1/2 text-neutral-900 dark:text-neutral-400"
             } rounded-md m-1 py-2 whitespace-nowrap sm:w-auto sm:px-8`}
           >
-            Suporte
+            {t('team.supportsubtitle')}
           </button>
         </div>
       </div>
