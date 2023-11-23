@@ -20,9 +20,9 @@
     "adress": "adress tal numero tal",
     "email": "aibdsab@asdaoi.com",
     "phone": "99888998909",
-    "form-name": "Nome completo",
+    "form-name": "Full name",
     "form-email": "Email",
-    "form-message": "Sua mensagem",
+    "form-message": "Your message",
     "form-send": "Send",
     "form-sucess": "Sucess",
     "form-back": "Back",
@@ -94,5 +94,15 @@
     "teamtitle": "Equipe",
     "teamsubtitle": "Equipe",
     "supportsubtitle": "Suporte"
+  },
+  "about":{
+    "title": "Our history",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia justo in magna varius euismod. Fusce consectetur vestibulum ex, sit amet tristique odio. Suspendisse at semper ligula, in porta justo. In hac habitasse platea dictumst. Mauris vehicula, erat a luctus volutpat, sapien risus accumsan purus, nec eleifend ante. Duis sit amet tincidunt elit. Vestibulum feugiat velit in justo fringilla, non efficitur quam dignissim. Cras scelerisque, metus ac ultricies tincidunt, orci libero tincidunt sem. Sed id condimentum arcu."
+  },
+  "banner": {
+    "contact": "Talk with us",
+    "about": "About us",
+    "portfolio": "Our projects",
+    "services": "Our services"
   }
 } 
