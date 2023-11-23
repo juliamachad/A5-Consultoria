@@ -11,7 +11,6 @@ const Layout = (props: any) => {
   const meta = {
     title: "A5 Consultoria",
     description: ``,
-    image: "/images/seo/halley-banner.png",
     type: "website",
     ...customMeta,
   };

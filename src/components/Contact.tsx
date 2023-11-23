@@ -82,7 +82,7 @@ export default function Contact() {
 
           <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
             <EnvelopeIcon className="w-4 h-4" />
-            <a href="mailto:hello@halley.vercel.app">{t('contact.email')}</a>
+            <a href="mailto:">{t('contact.email')}</a>
           </div>
 
           <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
@@ -100,7 +100,7 @@ export default function Contact() {
                 {...register("access_key")}
               />
               <input type="hidden" {...register("subject")} />
-              <input type="hidden" value="Halley" {...register("from_name")} />
+              <input type="hidden" value="A5" {...register("from_name")} />
               <input
                 type="checkbox"
                 id=""

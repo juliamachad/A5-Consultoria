@@ -79,21 +79,21 @@
     "5description": "Something about Diligenciamento de projetos here"
   },
   "team": {
-    "stefandescription": "Engenharia de Processos Consultoria em Mineração, Siderurgia e Reciclagem.",
+    "stefandescription": "Engineering de Processos Consultoria em Mineração, Siderurgia e Reciclagem.",
     "mislenedescription":"Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
-    "civiltitle": "Engenheiros Civis",
+    "civiltitle": "Engineering Civis",
     "civildescription": "Especialista em Estruturas Metálicas (Mestrado/Doutorado). Experiência na elaboração de projetos estruturais, de concreto armado e execução de obras.",
-    "eletricotitle": "Engenheiros Eletricistas",
+    "eletricotitle": "Engineering Eletricistas",
     "eletricodescription": "Especialistas em projetos elétricos e de automação. Experiência em serviços de campo e pesquisa energética eficiente.",
-    "mecanicotitle": "Engenheiros Mecânicos",
+    "mecanicotitle": "Engineering Mecânicos",
     "mecanicodescription": "Especialista na elaboração de projetos Estruturas Metálicas, Caldeiraria, Usinagem, Tubulações, entre outros.",
-    "minastitle":"Engenheiros de Minas",
+    "minastitle":"Engineering de Minas",
     "minasdescription":"Especialista na realização de estudos sobre a viabilidade técnica e econômica e elaboração de projeto de extração dos minérios.",
-    "campotitle": "Técnicos de campo",
-    "campodescription": "Equipe multidisciplinar, profissionais com grande experiência nas suas especialidades, trabalhando de forma integrada.",
-    "teamtitle": "Equipe",
-    "teamsubtitle": "Equipe",
-    "supportsubtitle": "Suporte"
+    "campotitle": "Technician de campo",
+    "campodescription": "Team multidisciplinar, profissionais com grande experiência nas suas especialidades, trabalhando de forma integrada.",
+    "teamtitle": "Team",
+    "teamsubtitle": "Team",
+    "supportsubtitle": "Support"
   },
   "about":{
     "title": "Our history",
