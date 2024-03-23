@@ -3,21 +3,6 @@
 La plantilla Halley es una Single Page Application (SPA) desarrollada con Next.js, TypeScript y Tailwind CSS. Cuenta con un diseño responsivo que se adapta a diferentes tamaños de pantalla, soporte para temas claro y oscuro, menú de navegación fijo en la parte superior de la pantalla semitransparente, hero principal con mensaje llamativo e imagen destacada, sección de servicios con iconos y descripciones de los servicios ofrecidos, sección de características más destacadas del servicio con una lista de funcionalidades e imágenes, tabla de precios con switch por mes y año, sección de contacto con un formulario de contacto y enlaces a redes sociales, prefooter llamado de acción para confirmar venta, y footer con enlaces principales y links de redes sociales.
 
 
-# 🚀 Características
-La plantilla Halley incluye las siguientes características principales:
-
-- 📱 Diseño responsivo que se adapta a diferentes tamaños de pantalla.
-- 🌓 Soporta tema claro y oscuro.
-- 📍 Menú de navegación fijo en la parte superior de la pantalla semitransparente.
-- 🚀 Hero principal, con mensaje llamativo e imagen destacada.
-- 💼 Sección de servicios con iconos y descripciones de los servicios ofrecidos.
-- 🎉 Sección de características más destacadas del servicio con una lista de funcionalidades e imágenes.
-- 💰 Tabla de precios con switch por mes y año.
-- ❓ Menu plegable de preguntas frecuentes.
-- 📞 Sección de contacto con un formulario de contacto y enlaces a redes sociales.
-- 🛍️ Prefooter llamado de acción para confirmar venta.
-- 📄 Footer con enlaces principales y links de redes sociales.
-
 
 # 🛠️ Requisitos
 - Node.js (versión 10 o superior)

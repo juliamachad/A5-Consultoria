@@ -1,4 +1,3 @@
-import { Hero } from "../components/Hero";
 import Layout from "../components/Layout";
 import { Banner } from "../components/Banner";
 import { Services } from "../components/Services";

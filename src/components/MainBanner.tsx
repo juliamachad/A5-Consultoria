@@ -4,7 +4,7 @@ import bg from '../../public/images/backgrounds/mina.png'
 
 import { useTranslation } from 'react-i18next';
 
-export function Hero() {
+export function MainBanner() {
   const { t, i18n } = useTranslation();
 
   return (
@@ -16,18 +16,18 @@ export function Hero() {
       <div className="max-w-7xl mx-auto pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="pt-6 md:pt-32 justify-center text-center sm:justify-start sm:text-center pq-bs">
           <h1 className="text-5xl font-bold text-white drop-shadow" suppressHydrationWarning>
-            {t('hero.welcome')} <br />
-            <span className="text-orange font-extrabold drop-shadow" suppressHydrationWarning>{t('hero.company')}</span>
+            {t('main-banner.welcome')} <br />
+            <span className="text-orange font-extrabold drop-shadow" suppressHydrationWarning>{t('main-banner.company')}</span>
           </h1>
           <p className="pt-6 text-base w-auto  text-white" suppressHydrationWarning>
-          {t('hero.description')} 
+          {t('main-banner.description')} 
           </p>
           <div className="flex flex-auto pt-10 gap-2 min-w-[350px] justify-center sm:justify-center">
 
             <div>
               <Link href="/about">
                 <button className="bg-orange text-white text-base rounded-full px-4 p-2 font-medium" suppressHydrationWarning>
-                {t('hero.button')}
+                {t('main-banner.button')}
                 </button>
               </Link>
             </div>

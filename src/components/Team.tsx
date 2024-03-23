@@ -8,16 +8,16 @@ import { useTranslation } from 'react-i18next';
 
 
 
-type BillingInterval = "year" | "month";
+type BillingInterval = "suport" | "team";
 
 export default function Team() {
   const { t, i18n } = useTranslation();
 
-  const products = [
+  const people = [
     {
-      foto: "/images/icons/linkedin-logo.png",
+      foto: "/images/team/stefan.jpeg",
       title: "Stefan Würzner",
-      frecuency: "month",
+      frecuency: "team",
       description: t('team.stefandescription'),
       features: [
         "stefan-wurzner",
@@ -28,9 +28,9 @@ export default function Team() {
       linkedin: "/images/icons/linkedin-logo.png",
     },
     {
-      foto: "/images/icons/linkedin-logo.png",
+      foto: "/images/team/mislene.jpeg",
       title: "Mislene Rosa",
-      frecuency: "month",
+      frecuency: "team",
       description: t('team.mislenedescription'),
       features: [
         "mislene-rosa",
@@ -43,7 +43,7 @@ export default function Team() {
     {
       foto: "",
       title: t('team.civiltitle'),
-      frecuency: "year",
+      frecuency: "suport",
       description: "",
       features: [
         t('team.civildescription')
@@ -56,7 +56,7 @@ export default function Team() {
     {
       foto: "",
       title: t('team.eletricotitle'),
-      frecuency: "year",
+      frecuency: "suport",
       description: "",
       features: [
         t('team.eletricodescription'),
@@ -69,7 +69,7 @@ export default function Team() {
     {
       foto: "",
       title: t('team.mecanicotitle'),
-      frecuency: "year",
+      frecuency: "suport",
       description: "",
       features: [
         t('team.mecanicodescription'),
@@ -82,7 +82,7 @@ export default function Team() {
     {
       foto: "",
       title: t('team.minastitle'),
-      frecuency: "year",
+      frecuency: "suport",
       description: "",
       features: [
         t('team.minasdescription'),
@@ -95,7 +95,7 @@ export default function Team() {
     {
       foto: "",
       title: t('team.campotitle'),
-      frecuency: "year",
+      frecuency: "suport",
       description: "",
       features: [
         t('team.campodescription'),
@@ -110,7 +110,7 @@ export default function Team() {
   const [mounted, setMounted] = useState(false);
 const { resolvedTheme, setTheme } = useTheme();
   const [billingInterval, setBillingInterval] =
-    useState<BillingInterval>("month");
+    useState<BillingInterval>("team");
   return (
     <div className="bg-gray-50 dark:bg-neutral-900" id="pricing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
@@ -120,10 +120,10 @@ const { resolvedTheme, setTheme } = useTheme();
       <div className="mx-auto px-4 sm:px-6 lg:px-8 sm:flex sm:flex-col sm:align-center">
         <div className="relative self-center text-base font-semibold mt-6 bg-neutral-200  dark:bg-neutral-800 rounded-lg flex sm:mt-8">
           <button
-            onClick={() => setBillingInterval("month")}
+            onClick={() => setBillingInterval("team")}
             type="button"
             className={`${
-              billingInterval === "month"
+              billingInterval === "team"
                 ? "relative w-1/2 bg-white dark:bg-neutral-600 text-neutral-900 dark:text-neutral-100"
                 : "ml-0.5 relative w-1/2 text-neutral-900 dark:text-neutral-400"
             } rounded-md m-1 py-2 whitespace-nowrap sm:w-auto sm:px-8`}
@@ -131,10 +131,10 @@ const { resolvedTheme, setTheme } = useTheme();
             {t('team.teamsubtitle')}
           </button>
           <button
-            onClick={() => setBillingInterval("year")}
+            onClick={() => setBillingInterval("suport")}
             type="button"
             className={`${
-              billingInterval === "year"
+              billingInterval === "suport"
                 ? "relative w-1/2 bg-white dark:bg-neutral-600 text-neutral-900 dark:text-neutral-100"
                 : "ml-0.5 relative w-1/2 text-neutral-900 dark:text-neutral-400"
             } rounded-md m-1 py-2 whitespace-nowrap sm:w-auto sm:px-8`}
@@ -146,7 +146,7 @@ const { resolvedTheme, setTheme } = useTheme();
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 
       md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-16 justify-center items-center">
-        {products.map(
+        {people.map(
           ({
             title,
             mostPopular,
@@ -172,7 +172,7 @@ const { resolvedTheme, setTheme } = useTheme();
                   >
                       <div className="flex justify-start pl-8 pb-8">
                       <Image
-                            src={linkedin}
+                            src={foto}
                             width={100}
                             height={10}
                             alt="Picture of the author"
@@ -264,7 +264,7 @@ const { resolvedTheme, setTheme } = useTheme();
                       
   
                       {/* features */}
-                      <ul className="mt-6 px-6 space-y-4 flex-1 border-t border-neutral-300 dark:border-neutral-500">
+                      <ul className="mt-6 px-3 space-y-4 flex-1 border-t border-neutral-300 dark:border-neutral-500">
                         <p className="mt-6 font-semibold dark:text-neutral-300">
                           
                         </p>

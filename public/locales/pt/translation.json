@@ -1,9 +1,9 @@
 {
-  "title": "Welcome to react using react-i18next",
-  "hero": {
+  "title": "",
+  "main-banner": {
     "welcome": "Bem vindo à",
     "company": "A5 Consultoria",
-    "description": "Aqui vai uma descricao em portugues",
+    "description": "Consultoria e Engenharia Industrial",
     "button": "Sobre nós"
   },
   "navbar": {
@@ -98,7 +98,10 @@
   },
   "about":{
     "title": "Nossa história",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia justo in magna varius euismod. Fusce consectetur vestibulum ex, sit amet tristique odio. Suspendisse at semper ligula, in porta justo. In hac habitasse platea dictumst. Mauris vehicula, erat a luctus volutpat, sapien risus accumsan purus, nec eleifend ante. Duis sit amet tincidunt elit. Vestibulum feugiat velit in justo fringilla, non efficitur quam dignissim. Cras scelerisque, metus ac ultricies tincidunt, orci libero tincidunt sem. Sed id condimentum arcu."
+    "description1": "Somos uma empresa apta a aceitar os mais diversos desafios que permeiam os processos de engenharia, devido ao nosso know-how.", 
+    "description2": "O nosso foco é gerar resultados para os nossos clientes, prezando sempre pela sustentabilidade do negócio e adequação do projeto à necessidade de cada demanda.", 
+    "description3": "A nossa qualidade técnica e vivência no mercado, nos permite criar, aprimorar e/ou adaptar projetos de forma segura e inovadora, tendo como premissa o atendimento s normativas relacionadas.",
+    "description4": "Com sede em Belo Horizonte - MG, atuamos com fornecedores e clientes do Brasil, América do Norte, América do Sul e Europa. E, em cada atendimento asseguramos o suporte e o acompanhamento em todas as fases do projeto."
   },
   "banner": {
     "contact": "Fale com a gente",
