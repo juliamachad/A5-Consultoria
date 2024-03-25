@@ -9,6 +9,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+    
+require('dotenv').config();
+		
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${inter.variable} font-sans`}>

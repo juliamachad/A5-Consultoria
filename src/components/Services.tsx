@@ -81,7 +81,7 @@ export function Services() {
             </div>
             <h2 className="font-bold text-lg text-center">{t('services.5title')}</h2>
             <p className="pt-2 text-base text-center dark:text-neutral-400">
-           {t('services.5title')}
+           {t('services.5subtitle')}
             </p>
           </div>
           </div>

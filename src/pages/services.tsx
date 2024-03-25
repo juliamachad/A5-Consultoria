@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { Banner } from "../components/Banner";
 import { Services } from "../components/Services";
-import Faq from "@/components/Faq";
+import ListServices from "../components/ListServices";
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Layout>
       <Banner backgroundImage="/images/backgrounds/servicos.png" text={t('banner.services')}/>
-      <Faq />
+      <ListServices />
     </Layout>
   );
 }

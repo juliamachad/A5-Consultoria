@@ -15,9 +15,9 @@
   },
   "contact": {
     "title": "Contato",
-    "description": "Descricao em portugues",
+    "description": "Mande uma mensagem, estamos sempre dispostos a ajudar",
     "company": "A5 Consultoria",
-    "message": "Tem alguma coisa pra falar? We are here to help. Fill up the form or send email or call phone.",
+    "message": "Entre em contato e faça seu orçamento",
     "adress": "avenida tal numero tal",
     "email": "aibdsab@asdaoi.com",
     "phone": "99888998909",
@@ -34,29 +34,34 @@
     "message-required": "Escreva sua mensagem"
   },
   "footer": {
-    "description": "Descricao da empresa aqui",
+    "description": "Consultoria e Engenharia Industrial",
     "pages": "Páginas"
   },
   "projetos": {
-    "1title": "Projeto 1",
-    "2title": "Projeto 2",
-    "3title": "Projeto 3",
-    "1description": "Alguma explicacao do projeto 1 aqui",
-    "2description": "Alguma explicacao do projeto 2 aqui",
-    "3description": "Alguma explicacao do projeto 3 aqui",
-    "1features1": "Lacus eu mauris quisque tortor torquent",
-    "1features2":  "Lorem ipsum dolor sit amet consectetur",
-    "1features3": "Lacus eu mauris quisque tortor torquent",
-    "2features1": "Lacus eu mauris quisque tortor torquent",
-    "2features2":  "Lorem ipsum dolor sit amet consectetur",
-    "2features3": "Lacus eu mauris quisque tortor torquent",
-    "3features1": "Lacus eu mauris quisque tortor torquent",
-    "3features2":  "Lorem ipsum dolor sit amet consectetur",
-    "3features3": "Lacus eu mauris quisque tortor torquent"
+    "1title": "Aumentando Eficiência e Sustentabilidade: Caracterização de produtos em operações de reciclagem de sucata",
+    "1description1": "À medida que o mundo continua a enfatizar a sustentabilidade e a responsabilidade ambiental, as indústrias buscam maneiras de otimizar suas operações. Uma área que possui imenso potencial para melhorar a eficiência é a reciclagem de sucata. Ao implementar a caracterização regular dos produtos por tamanho de partículas e composição do material, as operações atuais podem obter benefícios significativos ao minimizar o desperdício, gerar coprodutos valiosos e maximizar a lucratividade.",
+    "1description2": "A caracterização do produto refere-se à avaliação sistemática dos produtos e materiais gerados pelo processo. Em vez de tratar todos os itens como sucata ferrosa genérica, metais não ferrosos ou resíduos, essa abordagem envolve identificar, classificar e avaliar o valor e as aplicações potenciais de cada tipo de material para cada classe de tamanho de partícula. Essa análise é realizada manualmente e serve como um primeiro passo para avaliar a eficiência das máquinas, identificar gargalos e justificar modificações nos ajustes e dimensionamento dos equipamentos existentes ou mesmo no processo de reciclagem completo adotado na planta. Além da avaliação pura dos produtos reais gerados pela planta de processamento, atenção especial deve ser dada à obtenção de amostras representativas de cada um dos fluxos de produtos.",
+    "1description3": "A5 tem uma longa experiência em homogeneização eficaz e amostragem representativa para uma grande variedade de materiais, análise de produtos, interpretação dos resultados, identificação de rotas de processo para recuperação de material valioso. Isso também inclui simulações de várias modificações dentro da planta para avaliar o maior impacto com o menor esforço.",
+
+    "2title": "Estudos conceituais para plantas de processamento estabelecem as bases para o seu projeto, garantindo a viabilidade e eficiência da sua planta desde o início.",
+    "2description1": "Estudos conceituais para plantas de processamento estabelecem as bases para o seu projeto, garantindo a viabilidade e eficiência da sua planta desde o início. Dedicamo-nos à excelência e inovação em engenharia na área de projeto e otimização de plantas de processamento. Dê uma olhada em como podemos ajudá-lo a projetar novas plantas de processamento ou expandir uma planta existente:",
+    "2description2": [
+      "Digitalização a laser 3D de plantas existentes: com o uso da tecnologia de ponta de digitalização a laser 3D, capturamos a estrutura de sua planta existente com grande precisão, permitindo o planejamento de reformas e expansões perfeitas.",
+      "Tratamento de nuvem de pontos e modelagem as-build: transformamos dados brutos de nuvem de pontos em modelos 3D com detalhamento de acordo com as necessidades do projeto, oferecendo uma réplica digital de sua planta para análise e planejamento completos.",
+      "Projeto de planta 2D e 3D: nossa equipe cria modelos 2D e 3D detalhados de sua planta, proporcionando uma visão clara de seu projeto e facilitando a precisão na execução.",
+      "Cálculos estruturais e de fundação: Nosso processo de engenharia se estende a cálculos de tensão estrutural, bem como dimensionamento e cálculos de fundações necessárias, garantindo que o projeto de sua planta seja robusto, seguro e em conformidade com todos os padrões e códigos relevantes. Esta análise crítica garante a longevidade e a confiabilidade da sua instalação sob cargas e condições operacionais, mas também pode ser estendida para considerar condições sísmicas e climáticas.",
+      "Seleção, pré-dimensionamento e descrição técnica de equipamentos de processamento: nossa expertise orienta a seleção e dimensionamento do equipamento de processamento ideal para suas necessidades, complementado por descrições técnicas detalhadas para o processo de orçamento.",
+      "Orçamentos de Equipamentos: fornecemos orçamentos completos para todos os equipamentos necessários, garantindo clareza e transparência na fase orçamentária do seu projeto.",
+      "Planejamento de planta com desenho de layout: nosso processo de planejamento inclui a criação de desenhos de layout detalhados, garantindo o uso eficiente de espaço e recursos em sua planta.",
+      "Definição de critérios de projeto: estabelecemos critérios de projeto claros com base nos requisitos exclusivos do seu projeto, preparando o cenário para uma planta que atenda às suas necessidades operacionais e padrões regulatórios."
+    ],
+    "2description3": "Na A5 Consultoria temos o compromisso de entregar soluções de engenharia que não apenas atendam, mas superem suas expectativas. Deixe-nos fazer parceria com você para dar vida ao seu projeto de planta de processamento com experiência e inovação incomparáveis."
+   
+
   },
   "portfolio":{
     "title": "Projetos",
-    "description": "Aqui vai uma descricao em portugues"
+    "description": "Alguns de nossos projetos de sucesso"
   },
   "services":{
     "titlesection": "Serviços",
@@ -64,19 +69,22 @@
     "descriptionsection": "Veja tudo o que oferecemos",
 
     "1title": "Consultoria",
-    "1subtitle": "Uma expliacao curta aqui",
-    "1description": "Alguma explicacao de consultoria aqui",
+    "1subtitle": "Diagnóstico da demanda e proposta de soluções adequadas através de relatórios detalhados",
+    "1description": ["A A5 consultoria realiza o diagnóstico da demanda e através de relatórios detalhados propõe soluções adequadas. Feito isso, são gerados fluxogramas que testam a viabilidade do projeto permitindo que o cliente:.",
+      
+    "Alguma explicacao de consultoria aqui.",
+    "Alguma explicacao de consultoria aqui."],
     "2title": "Engenharia de processos",
-    "2subtitle": "Uma expliacao curta aqui",
+    "2subtitle": "Definição com precisão das características da planta, reunindo todos os elementos que compõe o processo produtivo",
     "2description": "Alguma explicacao de Engenharia de processos aqui",
     "3title": "Engenharia de produtos",
-    "3subtitle": "Uma expliacao curta aqui",
+    "3subtitle": "Projetos completos com desenhos conceituais, básicos, de projeto, de montangem e de detalhes, em 2D e 3D",
     "3description": "Alguma explicacao de Engenharia de produtos aqui",
-    "4title": "Serviço de campo",
-    "4subtitle": "Uma expliacao curta aqui",
+    "4title": "Serviços de campo",
+    "4subtitle": "Supervisão de montagem, Comissionamento e operação assistida, Assistencia técnica e manutenção",
     "4description": "Alguma explicacao de Serviço de campo aqui",
     "5title": "Diligenciamento de projetos",
-    "5subtitle": "Uma expliacao curta aqui",
+    "5subtitle": "Auditoria de Fornecedores, Plano de fabricação e inspeção, Inspeções de Fabricação/montagem",
     "5description": "Alguma explicacao de Diligenciamento de projetos aqui"
   },
   "team": {
@@ -107,6 +115,160 @@
     "contact": "Fale com a gente",
     "about": "Sobre nós",
     "portfolio": "Nossos projetos concluídos",
-    "services": "Nossos serviços"
+    "services": "Nossos serviços",
+    "consultoria": "Consultoria",
+    "eng_processos": "Engenharia de processos",
+    "eng_produtos": "Engenharia de produtos",
+    "serv_campo": "Serviços de campo",
+    "diligenciamento": "Diligenciamento de projetos"
+  },
+  "consultoria":{
+    "title":"Consultoria de processos",
+    "p-1":"A A5 consultoria realiza o diagnóstico da demanda e através de relatórios detalhados propõe soluções adequadas. Feito isso, são gerados fluxogramas que testam a viabilidade do projeto permitindo que o cliente:",
+    "li-1":[" ⁠Avalie as variáveis para maximizar a eficiência da planta mediante a otimização das operações que controlam o rendimento e a recuperação.",
+            "⁠Quantifique a expectativa de novos produtos e rejeitos Minimize o risco associado com as alterações no processo.",
+            "⁠Reduza os custos de implementação através da realização do projeto e compra de equipamentos apropriados."],
+            "h2-1":"Desenvolvimento de fluxogramas",
+            "p-2":"Um fluxograma eficiente e otimizado é fundamental para a execução do projeto. Nossas atividades de desenho de fluxograma produzem os parâmetros necessários para uma nova planta e/ou melhoria do processo existente. compreende a Indicação de todas as modificações a serem realizadas. posicionamento dos novos equipamentos, avallação da eficiência, rendimento e grau de recuperação da planta.",
+            "h2-2":"Projeto de layout de instalação e montagem",
+            "p-3":"Consiste em dimensionar o fluxograma definido para o processo no espaço disponível para a planta, indicação de todas as modificações a serem realizadas, posicionamento dos novos equipamentos, cortes, elevações e detalhes relevantes para o entendimento do projeto.",
+            "ïmg1":"images/consultoria/consultoria1.png",
+            "ïmg2":"images/consultoria/consultoria2.png",
+            "h2-3":"Especificação técnica",
+            "p-4":"A A5 consultoria trabalha em todos os estágios do desenvolvimento do projeto, desde um estudo de escopo preliminar com pre dimensionamento das novas estruturas metálicas para possibilitar estimativa de custo de fabricação e plano de cargas para estimativa de obras civis até a execução da obra.",
+            "subtitle": "A A5 consultoria oferece todo suporte técnico necessário para o projeto, tais como:",
+            "li-2":["Memorial descritivo do projeto",
+            "Lista de componentes e equipamentos",
+            "Especificação, dimensionamento e descritivo técnico dos equipamentos",
+            "Indicação de fornecedores qualificados",
+            "Assistência para cotação, equalização de proposta técnicas de diferentes fornecedores",
+            "Acompanhamento de testes nos fornecedores dos equipamentos."
+      ]
+  },
+  "eng_processos":{
+    "title":"Engenharia de Processos",
+    "p-1":"Essa fase do projeto é caracterizada por estudos preliminares, projetos, estudos de viabilidade técnica e econômica. Momento em que são reunidos todos os elementos que compõe o processo produtivo, com o objetivo de definir com precisão as características da planta. A partir do fluxograma e layout aprovados serão detalhadas as soluções e projetos integrados com elaboração da engenharia conceitual e detalhamento multidisciplinar:",
+    "subtitle-1":"A. Disciplina de Civil",
+    "p-2":"I. Projeto de fundação",
+    "p-3":"Desenvolvimento de projeto de fundações em concreto armado para as estrutura metálica e piso industrial, incluindo cálculo estrutural, detalhamento e emissão ART. Cálculo estrutural e geotécnico das fundações em concreto armado.",
+    "p-4":"II. Plano de carga",
+    "p-5":"Para a análise e o dimensionamento do plano de carga, usou-se o software especifico para análise do carregamento. No modelo digital gerado da estrutura serão aplicados os carregamentos atuantes e parâmetros de verificação. Como dados de saída, o programa fornece esforços solicitantes e deformações nas barras, deslocamentos nodais e reações de apoio através do Método dos Elementos Finitos.",
+    "ïmg1":"images/eng_processos/processos1.png",
+    "subtitle-2":"B. Disciplina Estrutural",
+    "p-6":"I. Projeto de estrutura metálica",
+    "p-7":"Desenvolvimento de cálculo da estrutura metálica, incluindo cálculo estrutural de todos os componentes, ligações entre barras, verificação modal da estrutura (análise de vibrações) e demais verificações normativas. Conforme requisitos legais, emissão de ART pelo Engenheiro responsável.",
+    "ïmg2":"images/eng_processos/processos2.png",
+    "p-8":"II. Detalhamento para fabricação estrutura metálica",
+    "p-9":"Desenhos detalhados para fabricação de plataformas, corrimões, estruturas metálicas, máquinas e peças diversas, montagens mecânicas, ajustes, tolerâncias.",
+    "bold":"Projeto detalhado para fabricação",
+    "p-10":"Todo o detalhamento é feito contemplando as normas nacionais vigentes no âmbito de segurança do trabalho, tal como a NR-12. Como escopo de projeto, a A5 Consultoria se compromete a reduzir ao minimo as necessidades de soldas de campo e adotar boas práticas de projeto de modo a reduzir os custos de fabricação e montagem da estrutura.",
+    "subtitle-3":"C. Disciplina de Mecânica",
+    "p-11":"I. Projeto detalhado e arranjo de instalação e montagem dos equipamentos",
+    "li-1":["Desenhos detalhados de arranjo para instalação.",
+            "Avaliação de interferências no local de instalação."
+    ],
+    "p-12":"II. Projeto detalhado de equipamentos auxiliares",
+    "p-13":"Desenhos detalhados para equipamentos auxiliares, por exemplo:",
+    "li-2":["Sistema de sustentação; tirantes; correntes etc.",
+    "Sistema Translação tipo carro trole",
+    "Sistema Festoon",
+    "Calhas de alimentação",
+    "Silos",
+    "Chutes de descarga, entre outros"
+   ],
+   "subtitle-4":"D. Disciplina de Elétrica e automação",
+   "li-3":["Estudo de demanda e cargas geral;",
+   "Lista de Equipamentos Elétricos;",
+   "Diagramas Unifilares;",
+   "Diagramas de Interligação;",
+   "Projeto básico de Aterramento e SPDA;",
+   "Rotas de Cabos Elétricos;",
+   "Projeto básico de Redes de Dutos, Eletrodutos e Leitos para Cabos Elétricos;",
+   "Projetos básico de Iluminação;",
+   "Lista de Cabos Elétricos;",
+   "Planilha de Quantidades de Elétrica;",
+   "Memorial Descritivo de Segurança do projeto elétrico;",
+   "Memorial Descritivo funcional do projeto eletrico."
+  ]
+  },
+
+  "eng_produtos":{
+    "title":"Engenharia de Produtos",
+    "p-1":"Oferecemos soluções e projetos integrados para reforma e adequação de equipamentos a NR 12 e NR 10. solicite projetos completos com desenhos conceituais, básicos, de projeto, de montagem e de detalhes (projetos em 2D e 3D).",
+    "bold-1":"Reforma e adequação (normas vigentes)",
+    "li-1":["Elaboração de desenhos das peças a serem reformadas.",
+    "Elaboração de listas de material.",
+    "Melhorias de projetos como proteções, modificações para o aumentar a durabilidade e segurança, facilitar a manutenção, entre outros."
+    ],
+    "bold-2":"Projetos novos e nacionalização de desenhos",
+    "li-2":["Projeto elétrico detalhado.",
+    "Indicação de fornecedores.",
+    "Acompanhamento e inspeção de fabricação.",
+    "Inspeção de embalagens e adequação para transporte.",
+    "Elaboração projeto As build."
+    ],
+    "ïmg1":"images/eng_processos/produtos1.png",
+    "subtitle-1":"Projetos novos e nacionalizção",
+    "li-3":["Elaboração de procedimentos de inspeção e testes.",
+    "Diagrama de Montagem.",
+    "Análise de risco e elaboração do manual.",
+    "Emissão de ART (Anotação de responsabilidade técnica)."
+    ],
+    "ïmg2":"images/eng_processos/produtos2.png"
+
+  },
+
+  "serv_campo":{
+    "title":"Serviços de campo",
+    "subtitle-1":"Supervisão de montagem",
+    "p-1":"Nossos profissionais possuem expertise para atuar em todas as etapas sendo que Uma de suas principais responsabilidades é acompanhar a montagem do projeto,",
+    "p-2":"Nesse momento, o contato com o cliente também se faz produtivo, tendo em vista que é possível monitorar a sua satisfação em relação ao que foi proposto e à entrega final.",
+    "ïmg1":"images/eng_processos/produtos1.png",
+    "p-3":"No que diz respeito à supervisão de montagem, a A5 disponibiliza os seguintes serviços:",
+    "li-1":["Treinamento",
+    "Elaboração de manual de instalação, operação e manutenção",
+    "Elaboração de instruções de montagem",
+    "Elaboração de instruções de teste"
+    ],
+    "subtitle-2":"Comissionamento e operação assistida",
+    "p-4":"Comissionamento é o processo de assegurar que os componentes de uma unidade industrial estejam projetados, instalados, testados, operando e mantidos de acordo com as necessidades e requisitos operacionais do processo.",
+    "p-5":"A equipe A5 Consultoria é treinada e autorizada pelos fabricantes originais dos equipamentos para fazer o comissionamento e operação assistida.",
+    "ïmg2":"images/eng_processos/produtos1.png",
+    "li-2":["Comissionamento e testes.",
+    "Solução de avarias e interferências.",
+    "Operação assistida.",
+    "Treinamentos de manutenção e operação.",
+    "Reforma e melhoria."
+    ],
+    "subtitle-3":"Assistência técnica e manutenção",
+    "p-6":"Para garantir a assistência técnica e manutenção com eficiência e qualidade a A5 consultoria mobiliza uma equipe multidisciplinar, com profissionais de grande experiência nas suas especialidades, trabalhando de forma integrada.",
+    "li-3":["Visita técnica para entender o problema e propor soluções",
+    "Relatório detalhado",
+    "Acompanhamento da reforma"
+    ]
+  },
+
+  "diligenciamento":{
+    "title":"Diligenciamento de projetos",
+    "p-1":"Essa etapa é fundamental para que o projeto seja entregue de acordo com o cronograma e dentro de todos os padrões técnicos e normas de segurança pré estabelecidos",
+    "p-2":"No que diz respeito ao diligenciamento a A5 disponibiliza os seguintes serviços:",
+    "subtitle-1":"Auditoria de Fornecedores",
+    "p-3":"Visita a fornecedores de equipamentos e materiais para verificação de instalações, procedimentos de fabricação, qualificação de pessoal, sistemas, exames para controle de qualidade e rastreabilidade.",
+    "subtitle-2":"Plano de Fabricação e Inspeção",
+    "p-4":"Antes do início da fabricação a equipe A5 elabora/verifica os planos e procedimentos de fabricação e de controle de qualidade.",
+    "subtitle-3":"Inspeções de Fabricação/montagem",
+    "p-5":"Os planos de inspeção de trabalho (PIT) são executados por profissionais qualificados.",
+    "bold-1":"Os serviços de diligenciamento incluem:",
+    "li-1":["Gerenciamento de projetos",
+    "Coordenação de diligenciamento com todos os fornecedores",
+    "Visitas de Diligenciamento;",
+    "Avaliação de risco",
+    "Inspeção e teste",
+    "Monitoramento de desempenho do fornecedor",
+    "Organização da documentação para o databook."
+    ]
+    
+   
+   
   }
 }

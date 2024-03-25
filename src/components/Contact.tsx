@@ -1,188 +1,154 @@
 import React from "react";
-import { useForm, useWatch } from "react-hook-form";
-
-import { MapIcon } from "@heroicons/react/24/outline";
+import { useForm } from "react-hook-form";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 
 type Info = {
-  access_key: string;
-  subject: string;
-  from_name: string;
-  botcheck: string;
   name: string;
   email: string;
   message: string;
 };
 
 export default function Contact() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm<Info, any>({
+  } = useForm<Info>({
     mode: "onTouched",
   });
 
-  const [isSuccess, setIsSuccess] = React.useState(false);
-  const [Message, setMessage] = React.useState("");
-
-  const onSubmit = async (data: any, e: any) => {
-    console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
-      })
-      .catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
+  const onSubmit = async (data: Info) => {
+    try {
+      const response = await fetch("https://formspree.io/f/xzbnjprn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+      if (response.ok) {
+        reset();
+      } else {
+        // Handle error response
+      }
+    } catch (error) {
+      // Handle network error
+    }
   };
+
   return (
     <div className="bg-gray-50 dark:bg-neutral-900" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
         <h2 className="text-4xl font-bold">{t('contact.title')} </h2>
-
         <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
-        {t('contact.description')}
+          {t('contact.description')}
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16">
         <div>
           <h2 className="text-lg font-bold">{t('contact.company')}</h2>
-          <p className="max-w-sm mt-4 mb-4 dark:text-neutral-400">
-          {t('contact.message')}
+          <p className="max-w-sm mt-2 mb-6 dark:text-neutral-400">
+            {t('contact.message')}
           </p>
 
-          <div className="flex items-center mt-8 space-x-2 text-dark-600 dark:text-neutral-400">
-            <MapIcon className="w-4 h-4" />
-            <span>{t('contact.adress')}</span>
+          <h3 className="text-base font-semibold">Stefan Wurzner</h3>
+          <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
+            <PhoneIcon className="w-4 h-4" />
+            <span>+55 (31) 98685-5489</span>
           </div>
 
           <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
             <EnvelopeIcon className="w-4 h-4" />
-            <a href="mailto:">{t('contact.email')}</a>
+            <a href="mailto:stefan@a5consultoria.com">stefan@a5consultoria.com</a>
+          </div>
+
+          <h3 className="text-base mt-6 font-semibold">Mislene Rosa</h3>
+          <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
+            <PhoneIcon className="w-4 h-4" />
+            <span>+55 (31) 98728-6493</span>
           </div>
 
           <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-neutral-400">
-            <PhoneIcon className="w-4 h-4" />
-            <a href="tel:51931999999">{t('contact.phone')}</a>
+            <EnvelopeIcon className="w-4 h-4" />
+            <a href="mailto:mislene@a5consultoria.com">mislene@a5consultoria.com</a>
           </div>
         </div>
 
         <div>
-          {!isSubmitSuccessful && (
-            <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="mb-5">
               <input
-                type="hidden"
-                value={process.env.NEXT_PUBLIC_FORM_CONTACT_API}
-                {...register("access_key")}
+                type="text"
+                placeholder={t('contact.form-name')}
+                autoComplete="false"
+                className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white rounded-md outline-none dark:placeholder:text-neutral-200 dark:bg-neutral-900 focus:ring-4 ${
+                  errors.name
+                    ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
+                    : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
+                }`}
+                {...register("name", {
+                  required: t('contact.name-required'),
+                  maxLength: 80,
+                })}
               />
-              <input type="hidden" {...register("subject")} />
-              <input type="hidden" value="A5" {...register("from_name")} />
+              {errors.name && (
+                <div className="mt-1 text-orange">
+                  <small>{errors.name.message}</small>
+                </div>
+              )}
+            </div>
+
+            <div className="mb-5">
               <input
-                type="checkbox"
-                id=""
-                className="hidden"
-                style={{ display: "none" }}
-                {...register("botcheck")}
-              ></input>
+                type="email"
+                placeholder={t('contact.form-email')}
+                autoComplete="false"
+                className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white rounded-md outline-none dark:placeholder:text-neutral-200 dark:bg-neutral-900   focus:ring-4  ${
+                  errors.email
+                    ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
+                    : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
+                }`}
+                {...register("email", {
+                  required: t('contact.email-required'),
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: t('contact.email-invalid'),
+                  },
+                })}
+              />
+              {errors.email && (
+                <div className="mt-1 text-orange">
+                  <small>{errors.email.message}</small>
+                </div>
+              )}
+            </div>
 
-              <div className="mb-5">
-                <input
-                  type="text"
-                  placeholder={t('contact.form-name')}
-                  autoComplete="false"
-                  className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white rounded-md outline-none dark:placeholder:text-neutral-200 dark:bg-neutral-900 focus:ring-4 ${
-                    errors.name
-                      ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
-                      : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
-                  }`}
-                  {...register("name", {
-                    required: t('contact.name-required'),
-                    maxLength: 80,
-                  })}
-                />
-                {errors.name && (
-                  <div className="mt-1 text-orange">
-                    <small>{errors.name.message}</small>
-                  </div>
-                )}
-              </div>
+            <div className="mb-3">
+              <textarea
+                placeholder={t('contact.form-message')}
+                className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white dark:placeholder:text-neutral-200 dark:bg-neutral-900   rounded-md outline-none  h-36 focus:ring-4  ${
+                  errors.message
+                    ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
+                    : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
+                }`}
+                {...register("message", { required: t('contact.message-required') })}
+              />
+              {errors.message && (
+                <div className="mt-1 text-orange">
+                  <small>{errors.message.message}</small>
+                </div>
+              )}
+            </div>
 
-              <div className="mb-5">
-                <label htmlFor="email_address" className="sr-only">
-                {t('contact.form-email')}
-                </label>
-                <input
-                  id="email_address"
-                  type="email"
-                  placeholder={t('contact.form-email')}
-                  // name="email"
-                  autoComplete="false"
-                  className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white rounded-md outline-none dark:placeholder:text-neutral-200 dark:bg-neutral-900   focus:ring-4  ${
-                    errors.email
-                      ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
-                      : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
-                  }`}
-                  {...register("email", {
-                    required: t('contact.email-required'),
-                    pattern: {
-                      value: /^\S+@\S+$/i,
-                      message: t('contact.email-required'),
-                    },
-                  })}
-                />
-                {errors.email && (
-                  <div className="mt-1 text-orange">
-                    <small>{errors.email.message}</small>
-                  </div>
-                )}
-              </div>
-
-              <div className="mb-3">
-                <textarea
-                  // name="message"
-                  placeholder={t('contact.form-message')}
-                  className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white dark:placeholder:text-neutral-200 dark:bg-neutral-900   rounded-md outline-none  h-36 focus:ring-4  ${
-                    errors.message
-                      ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
-                      : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
-                  }`}
-                  {...register("message", { required: t('contact.message-required') })}
-                />
-                {errors.message && (
-                  <div className="mt-1 text-orange">
-                    <small>{errors.message.message}</small>
-                  </div>
-                )}
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-4 font-semibold text-white transition-colors bg-neutral-900 rounded-md hover:bg-neutral-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-neutral-200 px-7 dark:bg-white dark:text-black "
-              >
+            <button
+              type="submit"
+              className="w-full py-4 font-semibold text-white transition-colors bg-neutral-900 rounded-md hover:bg-neutral-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-neutral-200 px-7 dark:bg-white dark:text-black "
+            >
                 {isSubmitting ? (
                   <svg
                     className="w-5 h-5 mx-auto text-white dark:text-neutral-900 animate-spin"
@@ -209,9 +175,8 @@ export default function Contact() {
                 )}
               </button>
             </form>
-          )}
 
-          {isSubmitSuccessful && isSuccess && (
+          {isSubmitSuccessful && isSubmitSuccessful && (
             <>
               <div className="flex flex-col items-center justify-center text-center text-white rounded-md">
                 <svg
@@ -232,7 +197,7 @@ export default function Contact() {
                 {t('contact.form-sucess')}
                 </h3>
                 <p className="text-neutral-900 dark:text-neutral-300 md:px-4">
-                  {Message}
+                  
                 </p>
                 <button
                   className="mt-6 py-2 px-4 bg-orange rounded-full focus:outline-none text-neutral-100"
@@ -244,7 +209,7 @@ export default function Contact() {
             </>
           )}
 
-          {isSubmitSuccessful && !isSuccess && (
+          {isSubmitSuccessful && !isSubmitSuccessful && (
             <div className="flex flex-col items-center justify-center text-center text-neutral-900 dark:text-neutral-300 rounded-md">
               <svg
                 width="97"
@@ -265,7 +230,7 @@ export default function Contact() {
               {t('contact.form-error')}
               </h3>
               <p className="text-neutral-900 dark:text-neutral-300 md:px-4">
-                {Message}
+               
               </p>
               <button
                 className="mt-6 py-2 px-4 bg-orange rounded-full focus:outline-none text-neutral-100"
