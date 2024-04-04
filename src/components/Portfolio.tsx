@@ -119,7 +119,7 @@ export function Portfolio() {
                 <div className="flex flex-col gap-2">
                 <Image
                      src="/images/portfolio/2projeto1.jpg"
-                     alt="Image description"
+                     alt=""
                      width={1920}
                      height={100}
                      quality={75}
@@ -129,7 +129,7 @@ export function Portfolio() {
                    <div>
                      <Image
                      src="/images/portfolio/2projeto2.jpg"
-                     alt="Image description"
+                     alt=""
                      width={1920}
                      height={100}
                      quality={75}
@@ -140,7 +140,7 @@ export function Portfolio() {
                    <div>
                      <Image
                      src="/images/portfolio/2projeto3.png"
-                     alt="Image description"
+                     alt=""
                      width={1920}
                      height={100}
                      quality={75}
