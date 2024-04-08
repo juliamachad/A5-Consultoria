@@ -4,7 +4,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 
-type Info = {
+type FormData = {
   name: string;
   email: string;
   message: string;
@@ -12,36 +12,34 @@ type Info = {
 
 export default function Contact() {
   const { t } = useTranslation();
+
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm<Info>({
-    mode: "onTouched",
-  });
+    reset
+  } = useForm();
 
-  const onSubmit = async (data: Info) => {
-    try {
-      const response = await fetch("https://formspree.io/f/xzbnjprn", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      if (response.ok) {
-        reset();
-      } else {
-        // Handle error response
-      }
-    } catch (error) {
-      // Handle network error
+  async function onSubmit(data: Record<string, any>) {
+    const formData = new FormData();
+    formData.append("access_key", "79a00d05-4017-42d8-a537-d4ebea9eda61");
+    for (const key in data) {
+      formData.append(key, data[key]);
     }
-  };
 
-  return (
-    <div className="bg-gray-50 dark:bg-neutral-900" id="contact">
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      reset(); // Limpa o formulário após o envio bem-sucedido
+    }
+  }
+
+return (
+  <div className="bg-gray-50 dark:bg-neutral-900" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
         <h2 className="text-4xl font-bold">{t('contact.title')} </h2>
         <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
@@ -80,7 +78,7 @@ export default function Contact() {
         </div>
 
         <div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form className="mb-5" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-5">
               <input
                 type="text"
@@ -97,10 +95,12 @@ export default function Contact() {
                 })}
               />
               {errors.name && (
-                <div className="mt-1 text-orange">
-                  <small>{errors.name.message}</small>
-                </div>
-              )}
+          
+              <small>{t('contact.name-required')}</small>
+          
+            )}
+        
+        
             </div>
 
             <div className="mb-5">
@@ -121,11 +121,11 @@ export default function Contact() {
                   },
                 })}
               />
-              {errors.email && (
-                <div className="mt-1 text-orange">
-                  <small>{errors.email.message}</small>
-                </div>
-              )}
+               {errors.email && (
+          
+          <small>{t('contact.email-required')}</small>
+      
+        )}
             </div>
 
             <div className="mb-3">
@@ -138,11 +138,11 @@ export default function Contact() {
                 }`}
                 {...register("message", { required: t('contact.message-required') })}
               />
-              {errors.message && (
-                <div className="mt-1 text-orange">
-                  <small>{errors.message.message}</small>
-                </div>
-              )}
+               {errors.name && (
+          
+          <small>{t('contact.message-required')}</small>
+      
+        )}
             </div>
 
             <button
