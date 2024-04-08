@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
             return <p className="text-center pb-4 text-lg font-semibold mt-4 " key={key}>{value}</p>;
         } else if (key.startsWith("li") && Array.isArray(value)) {
           return (
-            <ul className="list-disc pb-6 mx-4 md:mx-24 max-w-2xl md:max-w-5xl" key={key}>
+            <ul className="list-disc pb-6 mx-4 md:mx-24 max-w-2xl md:max-w-xl" key={key}>
               {value.map((item, index) => (
                 <li className=" pb-2" key={index}>{item}</li>
               ))}

@@ -207,14 +207,14 @@
     "Inspeção de embalagens e adequação para transporte.",
     "Elaboração projeto As build."
     ],
-    "ïmg1":"images/eng_processos/produtos1.png",
+    "ïmg1":"images/eng_produtos/produtos1.png",
     "subtitle-1":"Projetos novos e nacionalizção",
     "li-3":["Elaboração de procedimentos de inspeção e testes.",
     "Diagrama de Montagem.",
     "Análise de risco e elaboração do manual.",
     "Emissão de ART (Anotação de responsabilidade técnica)."
     ],
-    "ïmg2":"images/eng_processos/produtos2.png"
+    "ïmg2":"images/eng_produtos/produtos2.png"
 
   },
 
@@ -223,7 +223,7 @@
     "subtitle-1":"Supervisão de montagem",
     "p-1":"Nossos profissionais possuem expertise para atuar em todas as etapas sendo que Uma de suas principais responsabilidades é acompanhar a montagem do projeto,",
     "p-2":"Nesse momento, o contato com o cliente também se faz produtivo, tendo em vista que é possível monitorar a sua satisfação em relação ao que foi proposto e à entrega final.",
-    "ïmg1":"images/eng_processos/produtos1.png",
+    "img1":"images/serv_campo/campo1.jpeg",
     "p-3":"No que diz respeito à supervisão de montagem, a A5 disponibiliza os seguintes serviços:",
     "li-1":["Treinamento",
     "Elaboração de manual de instalação, operação e manutenção",
@@ -233,7 +233,7 @@
     "subtitle-2":"Comissionamento e operação assistida",
     "p-4":"Comissionamento é o processo de assegurar que os componentes de uma unidade industrial estejam projetados, instalados, testados, operando e mantidos de acordo com as necessidades e requisitos operacionais do processo.",
     "p-5":"A equipe A5 Consultoria é treinada e autorizada pelos fabricantes originais dos equipamentos para fazer o comissionamento e operação assistida.",
-    "ïmg2":"images/eng_processos/produtos1.png",
+    "img2":"images/serv_campo/campo2.jpeg",
     "li-2":["Comissionamento e testes.",
     "Solução de avarias e interferências.",
     "Operação assistida.",

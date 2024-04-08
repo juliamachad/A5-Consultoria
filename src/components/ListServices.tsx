@@ -61,7 +61,7 @@ export default function ListServices() {
                       alt="oi"
                       className="mr-3"
                     />
-                    <h2 className="font-semibold text-lg">{question}</h2>
+                    <h2 className="font-semibold text-lg dark:text-neutral-900">{question}</h2>
                     </Link>
                     
                     

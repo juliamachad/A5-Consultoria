@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next';
             return <h3 className="text-center pb-2 text-lg mt-4 text-orange font-medium mb-4 w-2/3" key={key}>{value}</h3>;
         
         } else if (key.startsWith("ïmg") && typeof value === "string") {
-          return <img className="pb-6" key={key} src={value} alt={`Imagem ${key}`} />;
+          return <img className="pb-6" key={key} src={value} />;
         }
         return null;
       });

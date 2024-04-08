@@ -208,7 +208,7 @@
       "Packaging inspection and adaptation for transportation.",
       "Preparation of as-built project."
   ],
-  "ïmg1": "images/eng_processos/produtos1.png",
+  "ïmg1": "images/eng_produtos/produtos1.png",
   "subtitle-1": "New projects and nationalization",
   "li-3": [
       "Preparation of inspection and testing procedures.",
@@ -216,14 +216,14 @@
       "Risk analysis and manual preparation.",
       "Issuance of ART (Technical Responsibility Annotation)."
   ],
-  "ïmg2": "images/eng_processos/produtos2.png"
+  "ïmg2": "images/eng_produtos/produtos2.png"
 },
 "serv_campo": {
   "title": "Field Services",
   "subtitle-1": "Assembly Supervision",
   "p-1": "Our professionals have expertise to act in all stages, with one of their main responsibilities being to supervise the assembly of the project.",
   "p-2": "At this moment, the contact with the client is also productive, as it is possible to monitor their satisfaction regarding what was proposed and the final delivery.",
-  "ïmg1": "images/eng_processos/produtos1.png",
+  "img1": "images/serv_campo/campo1.jpeg",
   "p-3": "Regarding assembly supervision, A5 provides the following services:",
   "li-1": [
       "Training",
@@ -234,7 +234,7 @@
   "subtitle-2": "Commissioning and Assisted Operation",
   "p-4": "Commissioning is the process of ensuring that the components of an industrial unit are designed, installed, tested, operating, and maintained according to the needs and operational requirements of the process.",
   "p-5": "The A5 Consultoria team is trained and authorized by the original equipment manufacturers to carry out commissioning and assisted operation.",
-  "ïmg2": "images/eng_processos/produtos1.png",
+  "img2": "images/serv_campo/campo2.jpeg",
   "li-2": [
       "Commissioning and testing.",
       "Troubleshooting and interference solution.",
