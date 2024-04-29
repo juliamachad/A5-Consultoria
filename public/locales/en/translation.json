@@ -1,7 +1,7 @@
 {
   "main-banner": {
     "welcome": "Welcome to",
-    "company": "A5 Consulting",
+    "company": "A5 Consultoria",
     "description": "Consulting and Industrial Engineering",
     "button": "About us"
   },
@@ -9,7 +9,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "portfolio": "Portfolio",
+    "portfolio": "Case studies",
     "contact": "Contact"
   },
   "contact": {
@@ -58,7 +58,7 @@
     },
 
   "portfolio": {
-    "title": "Projects",
+    "title": "Case studies",
     "description": "Some of our successful projects"
   },
   "services": {
@@ -103,7 +103,7 @@
   "description1": "We are a company capable of accepting the most diverse challenges that permeate engineering processes, due to our know-how.",
   "description2": "Our focus is to generate results for our clients, always prioritizing the sustainability of the business and the adequacy of the project to the needs of each demand.",
   "description3": "Our technical quality and market experience allow us to create, improve, and/or adapt projects in a safe and innovative way, with the premise of complying with related regulations.",
-  "description4": "Based in Belo Horizonte - MG, we work with suppliers and clients from Brazil, North America, South America, and Europe. And, in each interaction, we ensure support and follow-up in all project phases."
+  "description4": "Based in Belo Horizonte - MG, we work with suppliers and clients from Brazil, North and South America, Europe, Middle East and Africa. And, in each interaction, we ensure support and follow-up in all project phases."
 },
 "banner": {
   "contact": "Contact Us",

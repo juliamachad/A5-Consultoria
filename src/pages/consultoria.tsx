@@ -31,12 +31,13 @@ import { useTranslation } from 'react-i18next';
 
   return (
     <Layout>
+      <div className="flex justify-center">
       <div className="bg-white dark:bg-neutral-900 w-full px-24 pt-16 pb-16 max-w-7xl" id="listServices">
         <div className="container flex flex-col mx-6 items-center">
             <h2 className="text-4xl font-bold text-center mb-12 mt-12">{t('consultoria.title')}</h2>
             {renderContent(conteudo)}
         </div>
-        
+        </div>
       </div>
     </Layout>
   );

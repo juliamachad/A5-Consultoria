@@ -6,6 +6,10 @@
     @apply bg-rose-500 text-white ;
 }
 
+.text-center-last{
+    text-align-last: center;
+}
+
 .text-orange{
     color: #EE842D;
 }

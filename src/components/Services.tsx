@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslation } from 'react-i18next';
-
+import Link from "next/link";
 
 export function Services() {
   const { t, i18n } = useTranslation();
@@ -11,24 +11,28 @@ export function Services() {
       description: t('services.1subtitle'),
       image: "/images/services/consultoria.png",
       alt: "Service description",
+      href:"/consultoria",
     },
     {
       title: t('services.2title'),
       description: t('services.2subtitle'),
       image: "/images/services/processos.png",
       alt: "Service description",
+      href:"/eng_processos",
     },
     {
       title: t('services.3title'),
       description: t('services.3subtitle'),
       image: "/images/services/produtos.png",
       alt: "Service description",
+      href:"/eng_produtos",
     },
     {
       title: t('services.4title'),
       description: t('services.4subtitle'),
       image: "/images/services/campo.png",
       alt: "Service description",
+      href:"/serv_campo",
     },
     
   ];
@@ -46,8 +50,8 @@ export function Services() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16 grid md:grid-cols-2 flex-row flex-wrap justify-center">
-        {services.map(({ title, description, image, alt }) => (
-          <div key={title} className="servicos-home " style={{flexBasis: 'auto' }}>
+        {services.map(({ title, description, image, alt, href}) => (
+          <Link href={href} key={title} className="servicos-home " style={{flexBasis: 'auto' }}>
             <div className="h-32 w-32 flex justify-center mx-auto ">
               <Image
                 src={image}
@@ -63,11 +67,11 @@ export function Services() {
             <p className="pt-2 text-base text-center dark:text-neutral-400">
               {description}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16 flex flex-row flex-wrap justify-center">
-      <div className="servicos-home " style={{flexBasis: 'auto' }}>
+      <Link href="/diligenciamento" className="servicos-home " style={{flexBasis: 'auto' }}>
             <div className="h-32 w-32 flex justify-center mx-auto ">
               <Image
                 src="/images/services/diligenciamento.png"
@@ -83,7 +87,7 @@ export function Services() {
             <p className="pt-2 text-base text-center dark:text-neutral-400">
            {t('services.5subtitle')}
             </p>
-          </div>
+          </Link>
           </div>
     </div>
   );

@@ -10,7 +10,7 @@
     "home": "Início",
     "about": "Sobre",
     "services": "Serviços",
-    "portfolio": "Portfolio",
+    "portfolio": "Referências",
     "contact": "Contato"
   },
   "contact": {
@@ -60,7 +60,7 @@
 
   },
   "portfolio":{
-    "title": "Projetos",
+    "title": "Referências",
     "description": "Alguns de nossos projetos de sucesso"
   },
   "services":{
@@ -108,8 +108,8 @@
     "title": "Nossa história",
     "description1": "Somos uma empresa apta a aceitar os mais diversos desafios que permeiam os processos de engenharia, devido ao nosso know-how.", 
     "description2": "O nosso foco é gerar resultados para os nossos clientes, prezando sempre pela sustentabilidade do negócio e adequação do projeto à necessidade de cada demanda.", 
-    "description3": "A nossa qualidade técnica e vivência no mercado, nos permite criar, aprimorar e/ou adaptar projetos de forma segura e inovadora, tendo como premissa o atendimento s normativas relacionadas.",
-    "description4": "Com sede em Belo Horizonte - MG, atuamos com fornecedores e clientes do Brasil, América do Norte, América do Sul e Europa. E, em cada atendimento asseguramos o suporte e o acompanhamento em todas as fases do projeto."
+    "description3": "A nossa qualidade técnica e vivência no mercado, nos permite criar, aprimorar e/ou adaptar projetos de forma segura e inovadora, tendo como premissa o atendimento às normativas relacionadas.",
+    "description4": " Com sede em Belo Horizonte - MG, atuamos com fornecedores e clientes do Brasil, América do Norte e do Sul, Europa, Meio Oriente e África. E, em cada atendimento asseguramos o suporte e o acompanhamento em todas as fases do projeto."
   },
   "banner": {
     "contact": "Fale com a gente",
