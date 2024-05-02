@@ -50,12 +50,12 @@ export default function Footer() {
         <div className="col-span-2 sm:col-span-3 md:col-span-3 lg:col-span-2 2xl:col-span-2">
           <Link href="/">
             <Image
-              className="h-8 w-auto"
+              className=""
               src="/images/logos/logo-branca.png"
               alt="Logo"
-              width={150}
+              width={70}
               height={150}
-              quality={75}
+              quality={100}
               sizes="100vw"
             />
           </Link>

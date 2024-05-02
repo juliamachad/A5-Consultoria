@@ -18,7 +18,7 @@ export default function Team() {
       foto: "/images/team/stefan.jpeg",
       title: "Stefan Würzner",
       frecuency: "team",
-      description: t('team.stefandescription'),
+      description: t('team.stefandescription') ,
       features: [
         "stefan-wurzner",
       ],
@@ -186,7 +186,11 @@ const { resolvedTheme, setTheme } = useTheme();
                     
 
                     <p className="px-6 mt-4 leading-6 dark:text-neutral-400">
-                      {description}
+                    {title === "Stefan Würzner" ? (
+                    <>{description}<br /><br /><br /></>
+                  ) : (
+                    description
+                  )}
                     </p>
                   
 

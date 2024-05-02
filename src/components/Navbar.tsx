@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
 import ThemeSwitchButton from "./ThemeSwitchButton";
 
@@ -19,20 +20,34 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
+
+
 export default function Navbar() {
+  const router = useRouter();
   const { t, i18n } = useTranslation();
-  const navigation = [
+  const [navigation, setNavigation] = useState([
     { name: t('navbar.home'), href: "/", current: false },
     { name: t('navbar.about'), href: "/about", current: false },
     { name: t('navbar.services'), href: "/services", current: false },
     { name: t('navbar.portfolio'), href: "/portfolio", current: false },
-    //{ name: "Contato", href: "#contact", current: false },
-  ];
+    { name: t('navbar.contact'), href: "/contato", current: false },
+  ]);
 
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    const currentPath = router.pathname;
+    const updatedNavigation = navigation.map(item => {
+      return {
+        ...item,
+        current: item.href === currentPath
+      };
+    });
+    setNavigation(updatedNavigation);
+  }, [router.pathname]);
 
   return (
     <Disclosure
@@ -42,29 +57,29 @@ export default function Navbar() {
       {({ open }: { open: any }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-20 items-center justify-between">
               <div className="flex flex-1 items-center justify-between">
                 <div className="flex flex-shrink-0 items-center md:pl-0">
                   <Link href="/">
                   {resolvedTheme === "dark" ? (
                         <Image
-                        className="block h-8 w-auto"
+                        className="block"
                         src="/images/logos/logo-branca.png"
                         alt="Logo Your Company"
-                        width={150}
+                        width={70}
                         height={150}
-                        quality={75}
+                        quality={100}
                         sizes="100vw"
                       />
 
                     ) : (
                       <Image
-                      className="block h-8 w-auto"
+                      className="block"
                       src="/images/logos/logo@4x.png"
                       alt="Logo Your Company"
-                      width={150}
+                      width={70}
                       height={150}
-                      quality={75}
+                      quality={100}
                       sizes="100vw"
                     />
 
@@ -81,7 +96,7 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "text-neutral-900 dark:text-neutral-400 "
+                            ? " bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 p-2 text-base font-medium dark:hover:bg-orange hover:bg-orange hover:text-white dark:hover:text-white rounded-full"
                             : "text-neutral-900 dark:text-neutral-400 hover:underline",
                           "text-base font-medium"
                         )}
@@ -92,14 +107,7 @@ export default function Navbar() {
                     ))}
                   </div>
                   <div className=" inset-y-0 right-10 ml-3 sm:right-0 flex items-center gap-2">
-                  <Link
-                    href="/contato"
-                    className="hidden sm:block"
-                  >
-                    <button className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 p-2 text-base font-medium dark:hover:bg-orange hover:bg-orange hover:text-white dark:hover:text-white rounded-full">
-                    {t('navbar.contact')}
-                    </button>
-                  </Link>
+                 
                   <LanguageSwitchButton></LanguageSwitchButton>
                   <ThemeSwitchButton />
                 </div>
@@ -110,7 +118,7 @@ export default function Navbar() {
                 <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md text-neutral-900 dark:text-white ">
-                    <span className="sr-only">Open main menu</span>
+                    <span className="sr-only">Open menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                     ) : (
