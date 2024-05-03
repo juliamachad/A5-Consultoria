@@ -58,7 +58,7 @@ export function Services() {
                 alt={alt}
                 width={130}
                 height={130}
-                quality={75}
+                quality={100}
                 sizes="100vw"
                 priority
               />
@@ -78,7 +78,7 @@ export function Services() {
                 alt="foto"
                 width={130}
                 height={130}
-                quality={75}
+                quality={100}
                 sizes="100vw"
                 priority
               />

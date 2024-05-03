@@ -55,7 +55,7 @@ export default function ListServices() {
                       src={image}
                       width={35}
                       height={35}
-                      quality={75}
+                      quality={100}
                       sizes="100vw"
                       priority
                       alt="oi"

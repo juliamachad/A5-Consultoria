@@ -212,7 +212,7 @@ const { resolvedTheme, setTheme } = useTheme();
                         alt="Logo Your Company"
                         width={25}
                         height={10}
-                        quality={75}
+                        quality={100}
                         sizes="100vw"
                       />
 
@@ -223,7 +223,7 @@ const { resolvedTheme, setTheme } = useTheme();
                       alt="Logo Your Company"
                       width={25}
                       height={10}
-                      quality={75}
+                      quality={100}
                       sizes="100vw"
                     />
 

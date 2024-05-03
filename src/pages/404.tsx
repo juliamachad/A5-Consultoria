@@ -20,7 +20,7 @@ export default function Home() {
           alt="Image 404"
           width={1920}
           height={1080}
-          quality={75}
+          quality={100}
           sizes="100vw"
           className="w-[350px] md:w-4/12 justify-center text-center mx-auto"
         />

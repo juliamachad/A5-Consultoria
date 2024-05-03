@@ -60,7 +60,7 @@ export default function Customers() {
                                 alt={item.alt}
                                 width={150}
                                 height={150}
-                                quality={75}
+                                quality={100}
                                 sizes="100vw"
                             />
                         </Link>

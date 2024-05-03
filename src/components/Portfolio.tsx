@@ -32,7 +32,7 @@ export function Portfolio() {
              
             </div>
             <div
-              className="order-1 pt-6 lg:pt-0 ml-0 2xl:-ml-40"
+              className="order-1 p-6  ml-0 2xl:-ml-40"
             >
               <div className="flex flex-col lg:flex-row gap-2">
               
@@ -43,7 +43,7 @@ export function Portfolio() {
                      alt="Image description"
                      width={1920}
                      height={100}
-                     quality={75}
+                     quality={100}
                      sizes="100vw"
                      
                      priority
@@ -57,7 +57,7 @@ export function Portfolio() {
                      alt="Image description"
                      width={1920}
                      height={100}
-                     quality={75}
+                     quality={100}
                      sizes="100vw"
                      priority
                    />
@@ -68,7 +68,7 @@ export function Portfolio() {
                      alt="Image description"
                      width={1920}
                      height={100}
-                     quality={75}
+                     quality={100}
                      sizes="100vw"
                      priority
                    />
@@ -107,7 +107,7 @@ export function Portfolio() {
              
             </div>
             <div
-              className="order-1 md:pt-16 mr-0 2xl:-mr-40"
+              className="order-1 md:pt-16 mr-0 "
             >
               <div className="flex flex-row gap-2">
               
@@ -120,9 +120,9 @@ export function Portfolio() {
                 <Image
                      src="/images/portfolio/2projeto1.jpg"
                      alt=""
-                     width={1920}
+                     width={1020}
                      height={100}
-                     quality={75}
+                     quality={100}
                      sizes="100vw"
                      priority
                    />
@@ -132,7 +132,7 @@ export function Portfolio() {
                      alt=""
                      width={1920}
                      height={100}
-                     quality={75}
+                     quality={100}
                      sizes="100vw"
                      priority
                    />
@@ -143,7 +143,7 @@ export function Portfolio() {
                      alt=""
                      width={1920}
                      height={100}
-                     quality={75}
+                     quality={100}
                      sizes="100vw"
                      priority
                    />
