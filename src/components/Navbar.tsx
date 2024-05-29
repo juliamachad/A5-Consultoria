@@ -1,26 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from 'next/router';
-
-import ThemeSwitchButton from "./ThemeSwitchButton";
-
-
-import { useTranslation } from 'react-i18next';
-
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon } from "@heroicons/react/24/solid";
-import { XMarkIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from 'next-themes';
 import LanguageSwitchButton from "./LanguageSwitchButton";
-
+import ThemeSwitchButton from "./ThemeSwitchButton";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
-
-
 
 export default function Navbar() {
   const router = useRouter();
@@ -32,11 +23,8 @@ export default function Navbar() {
     { name: t('navbar.portfolio'), href: "/portfolio", current: false },
     { name: t('navbar.contact'), href: "/contato", current: false },
   ]);
-
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
-  // After mounting, we have access to the theme
-  useEffect(() => setMounted(true), []);
+  const { resolvedTheme } = useTheme();
+  const [logoImage, setLogoImage] = useState("/images/logos/logo@4x.png");
 
   useEffect(() => {
     const currentPath = router.pathname;
@@ -49,10 +37,18 @@ export default function Navbar() {
     setNavigation(updatedNavigation);
   }, [router.pathname]);
 
+  useEffect(() => {
+    if (resolvedTheme === "dark") {
+      setLogoImage("/images/logos/logo-branca.png");
+    } else {
+      setLogoImage("/images/logos/logo@4x.png");
+    }
+  }, [resolvedTheme]);
+
   return (
     <Disclosure
       as="nav"
-      className=" fixed top-0 left-0 right-0 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700 backdrop-blur-sm bg-white/90 dark:bg-neutral-900/80 z-20"
+      className="fixed top-0 left-0 right-0 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700 backdrop-blur-sm bg-white/90 dark:bg-neutral-900/80 z-20"
     >
       {({ open }: { open: any }) => (
         <>
@@ -61,30 +57,15 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-between">
                 <div className="flex flex-shrink-0 items-center md:pl-0">
                   <Link href="/">
-                  {resolvedTheme === "dark" ? (
-                        <Image
-                        className="block"
-                        src="/images/logos/logo-branca.png"
-                        alt="Logo Your Company"
-                        width={70}
-                        height={150}
-                        quality={100}
-                        sizes="100vw"
-                      />
-
-                    ) : (
-                      <Image
+                    <Image
                       className="block"
-                      src="/images/logos/logo@4x.png"
+                      src={logoImage}
                       alt="Logo Your Company"
                       width={70}
                       height={150}
                       quality={100}
                       sizes="100vw"
                     />
-
-                    )}
-                    
                   </Link>
                 </div>
 
@@ -106,17 +87,13 @@ export default function Navbar() {
                       </Link>
                     ))}
                   </div>
-                  <div className=" inset-y-0 right-10 ml-3 sm:right-0 flex items-center gap-2">
-                 
-                  <LanguageSwitchButton></LanguageSwitchButton>
-                  <ThemeSwitchButton />
+                  <div className="inset-y-0 right-10 ml-3 sm:right-0 flex items-center gap-2">
+                    <LanguageSwitchButton />
+                    <ThemeSwitchButton />
+                  </div>
                 </div>
-                </div>
-                
-                
 
                 <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md text-neutral-900 dark:text-white ">
                     <span className="sr-only">Open menu</span>
                     {open ? (
@@ -149,19 +126,18 @@ export default function Navbar() {
                 </Disclosure.Button>
               ))}
               <Link
-                  href="/contato"
-                  className={"text-neutral-900 dark:text-neutral-400 block py-4 text-base font-medium border-b border-neutral-200 dark:border-neutral-700"
-                  }
-                >
-                  <button className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 p-2 text-base font-medium dark:hover:bg-orange hover:bg-orange hover:text-white dark:hover:text-white rounded-full">
-                    {t('navbar.contact')}
-                    </button>
-                </Link>
-                <div className="flex flex-row">
-                <LanguageSwitchButton></LanguageSwitchButton>
-                  <ThemeSwitchButton />
-                </div>
-                
+                href="/contato"
+                className={"text-neutral-900 dark:text-neutral-400 block py-4 text-base font-medium border-b border-neutral-200 dark:border-neutral-700"
+                }
+              >
+                <button className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 p-2 text-base font-medium dark:hover:bg">
+                  {t('navbar.contact')}
+                </button>
+              </Link>
+              <div className="flex flex-row">
+                <LanguageSwitchButton />
+                <ThemeSwitchButton />
+              </div>
             </div>
           </Disclosure.Panel>
         </>
