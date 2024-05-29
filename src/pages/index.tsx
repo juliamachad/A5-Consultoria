@@ -1,6 +1,6 @@
 import { MainBanner } from "../components/MainBanner";
 import Layout from "../components/Layout";
-import { Portfolio } from "../components/Portfolio";
+import CardImage from "@/components/CardImage";
 import { Services } from "../components/Services";
 
 
@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
       <MainBanner/>
       <Services />
-      <Portfolio />
+      <CardImage />
     </Layout>
   );
 }

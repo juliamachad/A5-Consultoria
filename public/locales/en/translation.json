@@ -61,6 +61,14 @@
     "title": "Case studies",
     "description": "Some of our successful projects"
   },
+  "cardsPortfolio": {
+      "title": "Portfolio",
+      "card1title": "Characterization of products in scrap recycling operations",
+      "card1description": "As the world continues to emphasize sustainability and environmental responsibility, industries seek ways to optimize their operations. One area with immense potential for improving efficiency is scrap recycling. By implementing regular product characterization by particle size and material composition, current operations can gain significant benefits by minimizing waste, generating valuable coproducts, and maximizing profitability.",
+      "card2title": "Conceptual studies for processing plants",
+      "card2description": "Conceptual studies for processing plants lay the groundwork for your plant's design, ensuring the feasibility and efficiency of your plant from the outset. We are dedicated to excellence and innovation in engineering for the design and optimization of processing plants. Take a look at how we can help you design new processing plants or expand an existing plant.",
+      "button": "Learn more"
+    },
   "services": {
     "titlesection": "Services",
     "titlepage": "What we do",

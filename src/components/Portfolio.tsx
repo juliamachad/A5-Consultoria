@@ -12,7 +12,7 @@ export function Portfolio() {
     <div className="bg-white dark:bg-neutral-900" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-40 pt-16 pb-16">
         <h2 className="text-4xl font-bold text-center">{t('portfolio.title')}</h2>
-        <p className="pt-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
+        <p className="pt-6 text-base max-w-2xl text-center m-auto dark:text-neutral-300">
         {t('portfolio.description')}
         </p>
 
@@ -22,10 +22,10 @@ export function Portfolio() {
             </div>
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16  items-center mb-4 lg:gap-x-8">
             <div className="pt-6 lg:pt-6 order-1 md:order-2">
-                     <p className="pt-6 pb-6 text-base dark:text-neutral-400">
+                     <p className="pt-6 pb-6 text-base dark:text-neutral-300">
                      {t('projetos.1description1')}
                     </p>
-                    <p className="pt-6 pb-6 text-base dark:text-neutral-400">
+                    <p className="pt-6 pb-6 text-base dark:text-neutral-300">
                      {t('projetos.1description2')}
                     </p>
                     
@@ -79,7 +79,7 @@ export function Portfolio() {
             </div>
           </div>
 
-          <p className="pt-0 pb-6 text-base dark:text-neutral-400 text-center">
+          <p className="pt-0 pb-6 text-base dark:text-neutral-300 text-center">
                      {t('projetos.1description3')}
           </p>
         
@@ -90,7 +90,7 @@ export function Portfolio() {
            
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16  items-center mb-4">
             <div className="md:pt-6 order-1">
-            <p className="pt-6 pb-6 text-base dark:text-neutral-400">
+            <p className="pt-6 pb-6 text-base dark:text-neutral-300">
                      {t('projetos.2description1')}
                     </p>
                     <ul className="list-disc">
@@ -101,7 +101,7 @@ export function Portfolio() {
                         
                       ))}
                     </ul>
-                    <p className="pt-4 pb-6 text-base dark:text-neutral-400 ">
+                    <p className="pt-4 pb-6 text-base dark:text-neutral-300 ">
                      {t('projetos.2description3')}
           </p> 
              

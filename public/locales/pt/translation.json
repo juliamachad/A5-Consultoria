@@ -63,6 +63,14 @@
     "title": "Referências",
     "description": "Alguns de nossos projetos de sucesso"
   },
+  "cardsPortfolio":{
+    "title": "Portfólio",
+    "card1title":"Caracterização de produtos em operações de reciclagem de sucata",
+    "card1description":"À medida que o mundo continua a enfatizar a sustentabilidade e a responsabilidade ambiental, as indústrias buscam maneiras de otimizar suas operações. Uma área que possui imenso potencial para melhorar a eficiência é a reciclagem de sucata. Ao implementar a caracterização regular dos produtos por tamanho de partículas e composição do material, as operações atuais podem obter benefícios significativos ao minimizar o desperdício, gerar coprodutos valiosos e maximizar a lucratividade.",
+    "card2title":"Estudos conceituais para plantas de processamento",
+    "card2description":"Estudos conceituais para plantas de processamento estabelecem as bases para o seu projeto, garantindo a viabilidade e eficiência da sua planta desde o início. Dedicamo-nos à excelência e inovação em engenharia na área de projeto e otimização de plantas de processamento. Dê uma olhada em como podemos ajudá-lo a projetar novas plantas de processamento ou expandir uma planta existente",
+    "button": "Saber mais"
+  },
   "services":{
     "titlesection": "Serviços",
     "titlepage": "O que fazemos",
