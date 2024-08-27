@@ -227,7 +227,7 @@ return (
               </svg>
 
               <h3 className=" py-5 text-2xl font-medium text-orange">
-              {t('contact.form-error')}
+              {t('contact.form-error')} 
               </h3>
               <p className="text-neutral-900 dark:text-neutral-300 md:px-4">
                
