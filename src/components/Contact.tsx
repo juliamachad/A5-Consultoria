@@ -22,7 +22,7 @@ export default function Contact() {
 
   async function onSubmit(data: Record<string, any>) {
     const formData = new FormData();
-    formData.append("access_key", "79a00d05-4017-42d8-a537-d4ebea9eda61");
+    formData.append("access_key", "c98dcfe6-3804-4feb-a6f4-cbcabb49945a");
     for (const key in data) {
       formData.append(key, data[key]);
     }
