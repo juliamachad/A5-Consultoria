@@ -1,39 +1,39 @@
 # A5 Consultoria Website
 
-A5 Consultoria é uma empresa de engenharia especializada em consultoria, engenharia de processos e produtos, serviços de campo e diligenciamento de projetos. Com sede em Belo Horizonte - MG, a empresa atende clientes globalmente, oferecendo soluções inovadoras e sustentáveis em cada etapa de seus projetos.
+A5 Consultoria is an engineering company specializing in consulting, process and product engineering, field services, and project management. Based in Belo Horizonte - MG, the company serves clients globally, offering innovative and sustainable solutions at every stage of their projects.
 
-Este repositório contém o código-fonte do website institucional da A5 Consultoria, desenvolvido com Next.js e hospedado na Vercel.
+This repository contains the source code for the institutional website of A5 Consultoria, developed with Next.js and hosted on Vercel.
 
-## Funcionalidades
+## Features
 
-- **Multilíngue**: Suporte para dois idiomas (Português e Inglês).
-- **Modo claro/escuro**: Alternância entre temas claro e escuro.
-- **Design responsivo**: Otimizado para dispositivos móveis e desktops.
-- **SEO otimizado**: Segue melhores práticas para motores de busca.
-- **Desempenho**: Alta performance graças ao Next.js e à hospedagem na Vercel.
+- **Multilingual:** Support for two languages (Portuguese and English).
+- **Light/Dark Mode:** Toggle between light and dark themes.
+- **Responsive Design:** Optimized for mobile and desktop devices.
+- **SEO Optimized:** Follows best practices for search engines.
+- **Performance:** High performance thanks to Next.js and hosting on Vercel.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Next.js**: Framework para React, usado para renderização de páginas.
-- **Vercel**: Plataforma de hospedagem e deploy.
-- **React**: Biblioteca JavaScript para construção de interfaces.
-- **CSS**: Utilizado para a estilização do site.
-- **i18n**: Para gerenciamento e tradução de múltiplos idiomas.
+- **Next.js:** React framework used for page rendering.
+- **Vercel:** Hosting and deployment platform.
+- **React:** JavaScript library for building user interfaces.
+- **CSS:** Used for site styling.
+- **i18n:** For managing and translating multiple languages.
 
-## Instalação
+## Installation
 
-Siga os passos abaixo para rodar o projeto localmente:
+Follow the steps below to run the project locally:
 
-### Clonar o repositório
-git clone https://github.com/usuario/A5-Consultoria.git
+1. **Clone the repository:**
+git clone https://github.com/username/A5-Consultoria.git
 
-### Entrar no diretório do projeto
+2. **Navigate to the project directory:**
 cd A5-Consultoria
 
-### Instalar as dependências
+3. **Install the dependencies:**
 npm install
 
-### Rodar o servidor de desenvolvimento
+4. **Run the development server:**
 npm run dev
 
 ![A5darkexemplo](https://github.com/user-attachments/assets/55b8a17b-8336-4244-a393-04b0053a04c7)
