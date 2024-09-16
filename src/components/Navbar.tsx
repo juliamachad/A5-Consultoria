@@ -27,6 +27,16 @@ export default function Navbar() {
   const [logoImage, setLogoImage] = useState("/images/logos/logo@4x.png");
 
   useEffect(() => {
+    setNavigation([
+      { name: t('navbar.home'), href: "/", current: false },
+      { name: t('navbar.about'), href: "/about", current: false },
+      { name: t('navbar.services'), href: "/services", current: false },
+      { name: t('navbar.portfolio'), href: "/portfolio", current: false },
+      { name: t('navbar.contact'), href: "/contato", current: false },
+    ]);
+  }, [i18n.language, t]);
+  
+  useEffect(() => {
     const currentPath = router.pathname;
     const updatedNavigation = navigation.map(item => {
       return {
