@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import bg from '../../public/images/backgrounds/mina.png'
+import bg from '../../public/images/backgrounds/mina.jpg'
 
 import { useTranslation } from 'react-i18next';
 

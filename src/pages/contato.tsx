@@ -9,7 +9,7 @@ export default function Home() {
   const { t, i18n } = useTranslation();
   return (
     <Layout>
-      <Banner backgroundImage="/images/backgrounds/contato.png" text= {t('banner.contact')}/>
+      <Banner backgroundImage="/images/backgrounds/contato.jpg" text= {t('banner.contact')}/>
       <Contact></Contact>
     </Layout>
   );

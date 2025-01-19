@@ -8,7 +8,7 @@ export default function Home() {
   const { t, i18n } = useTranslation();
   return (
     <Layout>
-      <Banner backgroundImage="/images/backgrounds/portfolio.png" text={ t('banner.portfolio')}/>
+      <Banner backgroundImage="/images/backgrounds/portfolio.jpg" text={ t('banner.portfolio')}/>
       <Portfolio></Portfolio>
     </Layout>
   );

@@ -1,7 +1,7 @@
 import { Banner } from "../components/Banner";
 import Layout from "../components/Layout";
 import Customers from "../components/Customers";
-import bg from '../../public/images/backgrounds/sobre.png'
+import bg from '../../public/images/backgrounds/sobre.jpg'
 import Team from "@/components/Team";
 
 import { useTranslation } from 'react-i18next';

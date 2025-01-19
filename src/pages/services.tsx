@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <Banner backgroundImage="/images/backgrounds/servicos.png" text={t('banner.services')}/>
+      <Banner backgroundImage="/images/backgrounds/servicos.jpg" text={t('banner.services')}/>
       <ListServices />
     </Layout>
   );
